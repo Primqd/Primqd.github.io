@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <h1 className="flex justify-center">
-        Currently under work...
+        Currently under work... part 2
       </h1>
 
       <form className='flex items-center justify-center'>
