@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base : './', // relative paths in index.html
+  // base : './', // relative paths in index.html
   build : {
     outDir : 'dist', // deployed to ghpages
   },

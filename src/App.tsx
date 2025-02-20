@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css'
+import './index.css'
 
 import Navbar from './components/Navbar';
 
@@ -10,15 +10,17 @@ import About from './pages/About';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/games' element={<Games/>} />
-        <Route path='/projects' element={<Projects />} />
-        <Route path='/about' element={<About />} />
-      </Routes>
-    </Router>
+    <div className='bg-blue-500'>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/games' element={<Games/>} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
+      </Router>
+    </div>
   )
 }
 

@@ -1,5 +1,12 @@
+import { useState } from "react";
+
 function Home() {
-    return <h1 className="flex justify-center">Currently under work... part 3</h1>
+    const [num, setNum] = useState(0);
+
+    return <>
+        <h1 className="flex justify-center">Currently under work... part 3</h1>
+        <input type="button" value={`value = ${num}`} onClick={() => (setNum(num + 1))} />
+    </>
 }
 
 export default Home;
