@@ -1,23 +1,24 @@
-import * as React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
 
+import Navbar from './components/Navbar';
+
+import Home from './pages/Home';
+import Games from './pages/Games';
+import Projects from './pages/Projects';
+import About from './pages/About';
+
 function App() {
-  const [n, setN] = React.useState(0);
-
   return (
-    <>
-      <h1 className="flex justify-center">
-        Currently under work... part 3
-      </h1>
-
-      <form className='flex items-center justify-center'>
-        <input
-          type = 'button'
-          value = {n}
-          onClick={() => (setN(n + 1))}
-        ></input>
-      </form>
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/games' element={<Games/>} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    </Router>
   )
 }
 
