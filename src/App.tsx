@@ -10,17 +10,15 @@ import About from './pages/About';
 
 function App() {
   return (
-    <div className='bg-blue-500'>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home/>} />
-          <Route path='/games' element={<Games/>} />
-          <Route path='/projects' element={<Projects />} />
-          <Route path='/about' element={<About />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/games' element={<Games/>} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/about' element={<About />} />
+      </Routes>
+    </Router>
   )
 }
 
