@@ -9,7 +9,7 @@ const buttonStyle = "text-white";
 
 function Navbar() {
     return (
-        <nav className="bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <nav className="bg-gray-800 border-gray-700">
             <div className="h-8 overflow-hidden flex relative items-center justify-center mx-auto"> {/* top header stuff*/}
                 <img className="" src={debugNavbarArt} alt="generic navbar art"/>
                 <Link to="/" className="font-semibold absolute text-center top-0 z-1 text-white">frankvc.com</Link>
