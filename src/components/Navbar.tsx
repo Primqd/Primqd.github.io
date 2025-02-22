@@ -14,7 +14,7 @@ function Navbar() {
                 <img className="" src={debugNavbarArt} alt="generic navbar art"/>
                 <Link to="/" className="font-semibold absolute text-center top-0 z-1 text-white">frankvc.com</Link>
             </div>
-            <div className="max-w-screen-xl flex p-2 content-center">
+            <div className="max-w-screen flex p-2 content-center">
                 <ul className="flex w-full justify-evenly items-center">
                     <li className={buttonStyle}>
                         <Link to="/">
