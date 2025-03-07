@@ -6,11 +6,11 @@ import "../index.css";
 <p className="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500">The quick brown fox...</p> */}
 
 const liStyle = "";
-const buttonStyle = "z-1 w-[25vw] h-[4vh] text-[2vh] text-white transition duration-300 hover:bg-neutral-600 active:bg-neutral-400";
+const buttonStyle = "z-1 w-[25vw] h-[4vh] text-[2vh] text-white transition duration-300 hover:bg-neutral-600 active:bg-neutral-400 border-b-4 border-neutral-800";
 
 function Navbar() {
     return (
-        <nav className="fixed top-0 bg-neutral-700">
+        <nav className="fixed top-0 bg-neutral-700 z-5000">
             <div className="h-[4vh] overflow-hidden flex relative items-center justify-center mx-auto"> {/* top header stuff*/}
                 <img className="" src={debugNavbarArt} alt="generic navbar art"/>
                 <Link to="/" className="z-1 text-[3vh] absolute text-center -top-1 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-white to-blue-700 font-bold">Franklin Chen</Link>
