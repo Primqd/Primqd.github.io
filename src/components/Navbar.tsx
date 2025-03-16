@@ -10,7 +10,7 @@ const buttonStyle = "z-1 h-full w-full text-[2vh] text-white transition duration
 
 function Navbar() {
     return (
-        <nav className="bg-neutral-700 z-50 h-[8vh] w-[100vw]">
+        <nav className="bg-neutral-700 z-50 h-[8vh] w-[100vw] fixed top-0">
             <div className="h-1/2 w-full overflow-hidden relative flex"> {/* top header stuff*/}
                 <img className="absolute h-full w-full object-none z-0" src={debugNavbarArt} alt="generic navbar art"/>
                 <div className="flex w-full items-center justify-center">
