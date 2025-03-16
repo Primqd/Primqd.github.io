@@ -5,18 +5,20 @@ import "../index.css";
 {/* <p className="text-blue-600/100 dark:text-sky-400/100 bg-neutral-800 p-2">The quick brown fox...</p>
 <p className="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500">The quick brown fox...</p> */}
 
-const liStyle = "";
-const buttonStyle = "z-1 w-[25vw] h-[4vh] text-[2vh] text-white transition duration-300 hover:bg-neutral-600 active:bg-neutral-400 border-b-4 border-neutral-800";
+const liStyle = "w-1/4";
+const buttonStyle = "z-1 h-full w-full text-[2vh] text-white transition duration-300 hover:bg-neutral-600 active:bg-neutral-400"; //border-b-4 border-neutral-800
 
 function Navbar() {
     return (
-        <nav className="fixed top-0 bg-neutral-700 z-5000">
-            <div className="h-[4vh] overflow-hidden flex relative items-center justify-center mx-auto"> {/* top header stuff*/}
-                <img className="" src={debugNavbarArt} alt="generic navbar art"/>
-                <Link to="/" className="z-1 text-[3vh] absolute text-center -top-1 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-white to-blue-700 font-bold">Franklin Chen</Link>
+        <nav className="bg-neutral-700 z-50 h-[8vh] w-[100vw]">
+            <div className="h-1/2 w-full overflow-hidden relative flex"> {/* top header stuff*/}
+                <img className="absolute h-full w-full object-none z-0" src={debugNavbarArt} alt="generic navbar art"/>
+                <div className="flex w-full items-center justify-center">
+                    <Link to="/" className="absolute h-full text-[3vh] flex items-center justify-center z-1 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-white to-blue-700 font-bold">Franklin Chen</Link>
+                </div>
             </div>
-            <div className="h-[4vh] max-w-screen flex p-0">
-                <ul className="flex w-full items-center">
+            <div className="h-1/2 w-full flex">
+                <ul className="h-full w-full flex">
                     <li className={liStyle}>
                         <Link to="/">
                             <input className={buttonStyle} type="button" value="Home" />
@@ -32,7 +34,7 @@ function Navbar() {
                             <input className={buttonStyle} type="button" value="Projects" />
                         </Link>
                     </li>
-                    <li className={buttonStyle}>
+                    <li className={liStyle}>
                         <Link to="/about">
                             <input className={buttonStyle} type="button" value="About" />
                         </Link>
