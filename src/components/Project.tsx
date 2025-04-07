@@ -12,7 +12,7 @@ function Project({title, description, image, link} : ProjectProps) {
     return(
         <div className="w-[95%] px-[2.5%] h-[50%] pt-[2.5%]">
             <div className="flex border-4 border-neutral-500 bg-neutral-600 align-middle">
-                <div className="px-[2.5vw] py-[2.5vh] w-[100%]">
+                <div className="px-[2rem] py-[2rem] w-[100%]">
                         <Link to={link} className="text-5xl font-semibold hover:underline py-[1vh] w-fit">
                             {title}
                         </Link>
@@ -21,8 +21,8 @@ function Project({title, description, image, link} : ProjectProps) {
                         </p>
                 </div>
                 <Link to={link}>
-                    <figure className="max-w px-[2.5vw] py-[2.5vh]">
-                        <img className="max-w-[25vw] border-4 border-gray-400" alt="clay pig" src={image}></img>
+                    <figure className="max-w px-[2rem] py-[2rem]">
+                        <img className="max-w-[25rem] border-4 border-gray-400" alt="clay pig" src={image}></img>
                     </figure>
                 </Link>
             </div>
