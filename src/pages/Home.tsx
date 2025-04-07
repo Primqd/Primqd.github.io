@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import pig from "../assets/pig.png"
 
 function Home() {
-    return <div className="bg-neutral-800 text-white pt-[8vh] min-h-screen">
+    return <div className="bg-neutral-800 text-white pt-[5rem] min-h-screen">
         <div className="flex justify-center items-center gap-[35%] px-[8vw] pt-[16vh]">
             <div className="yap align-middle">
                 <h1 className="text-5xl font-semibold pb-[1vh]">Hi!</h1>

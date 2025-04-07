@@ -1,5 +1,5 @@
 function About() {
-    return <div className="bg-neutral-800 text-white pt-[8vh] min-h-screen">
+    return <div className="bg-neutral-800 text-white pt-[5rem] min-h-screen">
         <div className="flex px-[8vh] pt-[8vh]">
             <div className="yap align-middle">
                 <h1 className="text-5xl font-semibold pb-[1vh]">Hi!</h1>
