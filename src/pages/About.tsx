@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+const externalLinkStyle = "text-cyan-500 hover:underline"; // links to other websites
+
 function About() {
     return <div className="bg-neutral-800 text-white pt-[5rem] min-h-screen">
         <div className="flex px-[5rem] pt-[5rem]">
@@ -28,7 +30,7 @@ function About() {
                             <ul className="pl-[2.4rem] list-[upper-roman]">
                                 <li>
                                     Python, self taught using <Link
-                                        className="text-cyan-500 underline"
+                                        className={externalLinkStyle}
                                         target="_blank"
                                         to="https://www.amazon.com/Advanced-Python-Programming-Brian-Overland/dp/0135159946">
                                             <span className="italic">Supercharged Python </span>
@@ -37,7 +39,7 @@ function About() {
                                 </li>
                                 <li>
                                     C++, currently working through <Link
-                                        className="text-cyan-500 underline"
+                                        className={externalLinkStyle}
                                         target="_blank"
                                         to="https://www.stroustrup.com/tour3.html">
                                             <span className="italic">A Tour of C++ (Third Edition) </span>
@@ -46,7 +48,7 @@ function About() {
                                 </li>
                                 <li>
                                     C# in Unity, taught by the <Link
-                                        className="text-cyan-500 underline"
+                                        className={externalLinkStyle}
                                         target="_blank"
                                         to="https://www.digipen.edu/">
                                             DigiPen Institute of Technology
@@ -60,7 +62,7 @@ function About() {
                                 </li>
                                 <li>
                                     JavaScript/TypeScript, currently working through <Link
-                                            className="text-cyan-500 underline"
+                                            className={externalLinkStyle}
                                             target="_blank"
                                             to="https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X">
                                                 <span className="italic">Secrets of the JavaScript Ninja (1st edition)</span>
@@ -74,7 +76,7 @@ function About() {
                             <ul className="pl-[2.4rem] list-[upper-roman]">
                                 <li>
                                     React, self taught using <Link
-                                            className="text-cyan-500 underline"
+                                            className={externalLinkStyle}
                                             target="_blank"
                                             to="https://www.roadtoreact.com/">
                                                 <span className="italic">Road to React (2024 edition) </span>
@@ -91,14 +93,14 @@ function About() {
                             <ul className="pl-[2.4rem] list-[upper-roman]">
                                 <li>
                                     Basic Data Structures and Algorithms, informally taught by <Link
-                                            className="text-cyan-500 underline"
+                                            className={externalLinkStyle}
                                             target="_blank"
                                             to="https://jerryvc.com/">
                                                 my brother
                                     </Link>
                                 </li>
                                 <li> Linear Algebra, currently working through <Link
-                                            className="text-cyan-500 underline"
+                                            className={externalLinkStyle}
                                             target="_blank"
                                             to="https://www.amazon.com/Introduction-Linear-Algebra-Gilbert-Strang/dp/0980232775">
                                                 <span className="italic">Introduction to Linear Algebra (2nd edition) </span>
@@ -106,12 +108,12 @@ function About() {
                                     </Link> with a tutor
                                 </li>
                                 <li> Basic Statistics, see <Link
-                                        className="text-cyan-500 underline"
+                                        className={externalLinkStyle}
                                         target="_blank"
                                         to="https://github.com/Primqd/franklin-latex-notes/blob/main/AP%20Stats%20Notes/AP%20STATS.pdf">
                                             my fully annotated LaTex notes 
                                     </Link> on <Link
-                                            className="text-cyan-500 underline"
+                                            className={externalLinkStyle}
                                             target="_blank"
                                             to="https://www.bfwpub.com/high-school/us/product/The-Practice-of-Statistics/p/1319113338">
                                                 <span className="italic">The Practice of Statistics for the AP Exam, 6th Edition </span>
@@ -124,14 +126,14 @@ function About() {
                             Other Skills
                             <ul className="pl-[2.4rem] list-[upper-roman]">
                                 <li>Git, taught by <Link
-                                            className="text-cyan-500 underline"
+                                            className={externalLinkStyle}
                                             target="_blank"
                                             to="https://learn.bwsix.edly.io/course/version-control-git-github-2025/">
                                                 a MIT BWSI course
                                     </Link>
                                 </li>
                                 <li>LaTeX (see a collection of my LaTeX notes <Link
-                                            className="text-cyan-500 underline"
+                                            className={externalLinkStyle}
                                             target="_blank"
                                             to="https://github.com/Primqd/franklin-latex-notes">
                                                 here!
