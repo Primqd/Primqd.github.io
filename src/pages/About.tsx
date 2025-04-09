@@ -225,6 +225,9 @@ function About() {
                         <li>
                             GitHub: <Link className={externalLinkStyle} target="_blank" to="https://github.com/Primqd/"> https://github.com/Primqd/ </Link>
                         </li>
+                        <li>
+                            YouTube: <Link className={externalLinkStyle} target="_blank" to="https://www.youtube.com/@primqd6254/"> https://www.youtube.com/@primqd6254 </Link>
+                        </li>
                     </ul>
                 </div>
 
