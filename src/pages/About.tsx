@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const externalLinkStyle = "text-cyan-500 hover:underline"; // links to other websites
+const internalLinkStyle = "font-semibold text-white hover:underline" // links to subpages
 
 function About() {
     return <div className="bg-neutral-800 text-white pt-[5rem] min-h-screen">
@@ -160,29 +161,71 @@ function About() {
                     <h1 className="text-4xl font-semibold pb-[0.5rem]">
                         Hobbies
                     </h1>
-                    <p className="max-w-3xl text-lg text-gray-400">
-                        I'm Franklin, an aspiring computer science student currently in sophmore year of high school.
-                        I enjoy
-                        <span className="text-white font-semibold"> web development</span> and
-                        <span className="text-white font-semibold"> competitive programming</span>,
-                        but I'm still learning about different fields of CS I enjoy.
-                        On the side, I enjoy <span className="text-white font-semibold">photography </span>
-                        and <span className="text-white font-semibold">gaming</span>.
-                    </p>
+                    <ul className="pl-[1.2rem] list-disc max-w-3xl text-lg text-gray-400">
+                        <li className="Photography">
+                            Photography
+                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                                <li>I've been taking photos on and off for the last 3 years or so!</li>
+                                <li>I take all kinds of photos, but I especially like nature photography</li>
+                                <li>I use a <Link
+                                        className={externalLinkStyle}
+                                        target="_blank"
+                                        to="https://shop.panasonic.com/products/g100-mirrorless-camera-12-32mm-f3-5-5-6-lens">
+                                            Panasonic LUMIX G100
+                                    </Link> for most of my photos!</li>
+                                <li>You can see my photo portfolio  <Link
+                                        className={internalLinkStyle}
+                                        target="_blank"
+                                        to="/projects/portfolio">
+                                            here
+                                    </Link>! (Once I complete it, anyways...)</li>
+                            </ul>
+                        </li>
+                        <li className="Geometry Dash">
+                            Geometry Dash
+                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                                <li>My hardest is currently Noel Electra, but I do have 90% on Future Funk...</li>
+                                <li>You can see my profile <Link
+                                        className={externalLinkStyle}
+                                        target="_blank"
+                                        to="https://gdbrowser.com/u/Primqd">
+                                            here
+                                    </Link>!</li>
+                            </ul>
+                        </li>
+                        <li className="Minecraft">
+                            Minecraft
+                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                                <li>My username is Primqd!</li>
+                                <li>I used to play Hypixel Skyblock, although I've moved onto modded Minecraft currently.</li>
+                                <li>I enjoy TerraFirmaCraft and GregTech... pray for my playtime ;-;</li>
+                                <li>I'm currently playing through <Link
+                                        className={externalLinkStyle}
+                                        target="_blank"
+                                        to="https://modrinth.com/modpack/angel-tech-the-greg-age">
+                                            Angel Tech: The Greg Age
+                                    </Link> in my free time!</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                <div className="pb-[3rem] Contact Me">
+                <div className="pb-[3rem] Contacts">
                     <h1 className="text-4xl font-semibold pb-[0.5rem]">
-                        Contact Me
+                        Contacts
                     </h1>
-                    <p className="max-w-3xl text-lg text-gray-400">
-                        I'm Franklin, an aspiring computer science student currently in sophmore year of high school.
-                        I enjoy
-                        <span className="text-white font-semibold"> web development</span> and
-                        <span className="text-white font-semibold"> competitive programming</span>,
-                        but I'm still learning about different fields of CS I enjoy.
-                        On the side, I enjoy <span className="text-white font-semibold">photography </span>
-                        and <span className="text-white font-semibold">gaming</span>.
-                    </p>
+                    <ul className="pl-[1.2rem] list-decimal max-w-3xl text-lg text-gray-400">
+                        <li>
+                            Discord Username: <span className="text-white font-semibold">Primqd</span>
+                            <ul className="pl-[2.4rem] list-[disc]"><li>Best way to contact me. Message me first before friending please- I usually don't accept random friend requests.</li></ul>
+                        </li>
+                        <li>
+                            Email: <Link className={externalLinkStyle} target="_blank" to="mailto:franklinvchen@outlook.com"> franklinvchen@outlook.com </Link>
+                            <ul className="pl-[2.4rem] list-[disc]"><li>Second best way to contact me. Please note I might take a while to reply to you :)</li></ul>
+                        </li>
+                        <li>
+                            GitHub: <Link className={externalLinkStyle} target="_blank" to="https://github.com/Primqd/"> https://github.com/Primqd/ </Link>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
