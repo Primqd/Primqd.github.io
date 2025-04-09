@@ -4,7 +4,7 @@ const externalLinkStyle = "text-cyan-500 hover:underline"; // links to other web
 
 function About() {
     return <div className="bg-neutral-800 text-white pt-[5rem] min-h-screen">
-        <div className="flex px-[5rem] pt-[5rem]">
+        <div className="flex px-[min(5rem,10%)] pt-[min(4rem,10%)]">
             <div className="yap align-middle">
                 <div className="pb-[3rem] About me">
                     <h1 className="text-5xl font-semibold pb-[1rem]">
@@ -65,10 +65,23 @@ function About() {
                                             className={externalLinkStyle}
                                             target="_blank"
                                             to="https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X">
-                                                <span className="italic">Secrets of the JavaScript Ninja (1st edition)</span>
+                                                <span className="italic">Secrets of the JavaScript Ninja (1st edition) </span>
                                                 by John Resig and Bear Bibeault
                                     </Link>
                                 </li>
+                            </ul>
+                        </li>
+                        <li className="Competitive Programming">
+                            Competitive Programming
+                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                                <li>USACO Silver currently</li>
+                                <li>See my LeetCode profile <Link
+                                        className={externalLinkStyle}
+                                        target="_blank"
+                                        to="https://leetcode.com/u/Primqd/">
+                                            here
+                                    </Link></li>
+                                <li>Starting this summer, I plan to begin grinding competitive programming until I can reach at least USACO Gold. Wish me luck :)</li>
                             </ul>
                         </li>
                         <li className="Libraries">
