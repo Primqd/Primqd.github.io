@@ -184,7 +184,12 @@ function About() {
                         <li className="Geometry Dash">
                             Geometry Dash
                             <ul className="pl-[2.4rem] list-[upper-roman]">
-                                <li>My hardest is currently Noel Electra, but I do have 90% on Future Funk...</li>
+                                <li>My hardest is currently <Link
+                                        className={externalLinkStyle}
+                                        target="_blank"
+                                        to="https://www.youtube.com/watch?v=-88D0mXLDqg">
+                                            <span className="italic">Future Funk </span> by JonathanGD
+                                    </Link>!</li>
                                 <li>You can see my profile <Link
                                         className={externalLinkStyle}
                                         target="_blank"
