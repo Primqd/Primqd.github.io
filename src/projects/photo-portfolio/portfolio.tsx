@@ -5,7 +5,7 @@ import WeeklyPhotos from "./components/wp"
 
 
 function PhotoPortfolio() {
-    return <div>
+    return <div className="pt-[5rem]">
         <PhotoHeader />
         <PhotoProjects />
         <WeeklyPhotos />
