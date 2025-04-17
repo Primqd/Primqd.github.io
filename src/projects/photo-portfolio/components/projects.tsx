@@ -4,3 +4,11 @@
 // § MPC 2 - Your Choice
 // § MPC 3 - Your Choice
 // Final (MPC4) - Your Art, Your Choice
+
+function PhotoProjects() {
+    return <div>
+        <h1>Projects</h1>
+    </div>
+}
+
+export default PhotoProjects
