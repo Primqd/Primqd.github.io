@@ -6,7 +6,7 @@ import debug from "../../assets/debug_navbar_art.png"
 
 function PhotoPortfolio() {
     return <div className="">
-        <PhotoHeader photo={debug}/>
+        <PhotoHeader photo={debug} />
         <PhotoProjects />
         <WeeklyPhotos />
         <PhotoHacks />

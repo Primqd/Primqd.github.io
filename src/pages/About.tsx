@@ -34,8 +34,8 @@ function About() {
                                         className={externalLinkStyle}
                                         target="_blank"
                                         to="https://www.amazon.com/Advanced-Python-Programming-Brian-Overland/dp/0135159946">
-                                            <span className="italic">Supercharged Python </span>
-                                            by Brian Overland and John Bennett
+                                        <span className="italic">Supercharged Python </span>
+                                        by Brian Overland and John Bennett
                                     </Link>
                                 </li>
                                 <li>
@@ -43,8 +43,8 @@ function About() {
                                         className={externalLinkStyle}
                                         target="_blank"
                                         to="https://www.stroustrup.com/tour3.html">
-                                            <span className="italic">A Tour of C++ (Third Edition) </span>
-                                            by Bjarne Stroustrup
+                                        <span className="italic">A Tour of C++ (Third Edition) </span>
+                                        by Bjarne Stroustrup
                                     </Link>
                                 </li>
                                 <li>
@@ -52,7 +52,7 @@ function About() {
                                         className={externalLinkStyle}
                                         target="_blank"
                                         to="https://www.digipen.edu/">
-                                            DigiPen Institute of Technology
+                                        DigiPen Institute of Technology
                                     </Link>
                                 </li>
                                 <li>
@@ -63,11 +63,11 @@ function About() {
                                 </li>
                                 <li>
                                     JavaScript/TypeScript, currently working through <Link
-                                            className={externalLinkStyle}
-                                            target="_blank"
-                                            to="https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X">
-                                                <span className="italic">Secrets of the JavaScript Ninja (1st edition) </span>
-                                                by John Resig and Bear Bibeault
+                                        className={externalLinkStyle}
+                                        target="_blank"
+                                        to="https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X">
+                                        <span className="italic">Secrets of the JavaScript Ninja (1st edition) </span>
+                                        by John Resig and Bear Bibeault
                                     </Link>
                                 </li>
                             </ul>
@@ -77,11 +77,11 @@ function About() {
                             <ul className="pl-[2.4rem] list-[upper-roman]">
                                 <li>USACO Silver currently</li>
                                 <li>See my LeetCode profile <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://leetcode.com/u/Primqd/">
-                                            here
-                                    </Link></li>
+                                    className={externalLinkStyle}
+                                    target="_blank"
+                                    to="https://leetcode.com/u/Primqd/">
+                                    here
+                                </Link></li>
                                 <li>Starting this summer, I plan to begin grinding competitive programming until I can reach at least USACO Gold. Wish me luck :)</li>
                             </ul>
                         </li>
@@ -90,11 +90,11 @@ function About() {
                             <ul className="pl-[2.4rem] list-[upper-roman]">
                                 <li>
                                     React, self taught using <Link
-                                            className={externalLinkStyle}
-                                            target="_blank"
-                                            to="https://www.roadtoreact.com/">
-                                                <span className="italic">Road to React (2024 edition) </span>
-                                                by Robin Wieruch
+                                        className={externalLinkStyle}
+                                        target="_blank"
+                                        to="https://www.roadtoreact.com/">
+                                        <span className="italic">Road to React (2024 edition) </span>
+                                        by Robin Wieruch
                                     </Link>
                                 </li>
                                 <li>
@@ -107,31 +107,31 @@ function About() {
                             <ul className="pl-[2.4rem] list-[upper-roman]">
                                 <li>
                                     Basic Data Structures and Algorithms, informally taught by <Link
-                                            className={externalLinkStyle}
-                                            target="_blank"
-                                            to="https://jerryvc.com/">
-                                                my brother
+                                        className={externalLinkStyle}
+                                        target="_blank"
+                                        to="https://jerryvc.com/">
+                                        my brother
                                     </Link>
                                 </li>
                                 <li> Linear Algebra, currently working through <Link
-                                            className={externalLinkStyle}
-                                            target="_blank"
-                                            to="https://www.amazon.com/Introduction-Linear-Algebra-Gilbert-Strang/dp/0980232775">
-                                                <span className="italic">Introduction to Linear Algebra (2nd edition) </span>
-                                                by Gilbert Strang (link to 5th edition) 
-                                    </Link> with a tutor
+                                    className={externalLinkStyle}
+                                    target="_blank"
+                                    to="https://www.amazon.com/Introduction-Linear-Algebra-Gilbert-Strang/dp/0980232775">
+                                    <span className="italic">Introduction to Linear Algebra (2nd edition) </span>
+                                    by Gilbert Strang (link to 5th edition)
+                                </Link> with a tutor
                                 </li>
                                 <li> Basic Statistics, see <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://github.com/Primqd/franklin-latex-notes/blob/main/AP%20Stats%20Notes/AP%20STATS.pdf">
-                                            my fully annotated LaTex notes 
-                                    </Link> on <Link
-                                            className={externalLinkStyle}
-                                            target="_blank"
-                                            to="https://www.bfwpub.com/high-school/us/product/The-Practice-of-Statistics/p/1319113338">
-                                                <span className="italic">The Practice of Statistics for the AP Exam, 6th Edition </span>
-                                                by Daren Starnes and Josh Tabor
+                                    className={externalLinkStyle}
+                                    target="_blank"
+                                    to="https://github.com/Primqd/franklin-latex-notes/blob/main/AP%20Stats%20Notes/AP%20STATS.pdf">
+                                    my fully annotated LaTex notes
+                                </Link> on <Link
+                                    className={externalLinkStyle}
+                                    target="_blank"
+                                    to="https://www.bfwpub.com/high-school/us/product/The-Practice-of-Statistics/p/1319113338">
+                                        <span className="italic">The Practice of Statistics for the AP Exam, 6th Edition </span>
+                                        by Daren Starnes and Josh Tabor
                                     </Link>
                                 </li>
                             </ul>
@@ -140,18 +140,18 @@ function About() {
                             Other Skills
                             <ul className="pl-[2.4rem] list-[upper-roman]">
                                 <li>Git, taught by <Link
-                                            className={externalLinkStyle}
-                                            target="_blank"
-                                            to="https://learn.bwsix.edly.io/course/version-control-git-github-2025/">
-                                                a MIT BWSI course
-                                    </Link>
+                                    className={externalLinkStyle}
+                                    target="_blank"
+                                    to="https://learn.bwsix.edly.io/course/version-control-git-github-2025/">
+                                    a MIT BWSI course
+                                </Link>
                                 </li>
                                 <li>LaTeX (see a collection of my LaTeX notes <Link
-                                            className={externalLinkStyle}
-                                            target="_blank"
-                                            to="https://github.com/Primqd/franklin-latex-notes">
-                                                here!
-                                    </Link>)
+                                    className={externalLinkStyle}
+                                    target="_blank"
+                                    to="https://github.com/Primqd/franklin-latex-notes">
+                                    here!
+                                </Link>)
                                 </li>
                             </ul>
                         </li>
@@ -168,34 +168,34 @@ function About() {
                                 <li>I've been taking photos on and off for the last 3 years or so!</li>
                                 <li>I take all kinds of photos, but I especially like nature photography</li>
                                 <li>I use a <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://shop.panasonic.com/products/g100-mirrorless-camera-12-32mm-f3-5-5-6-lens">
-                                            Panasonic LUMIX G100
-                                    </Link> for most of my photos!</li>
+                                    className={externalLinkStyle}
+                                    target="_blank"
+                                    to="https://shop.panasonic.com/products/g100-mirrorless-camera-12-32mm-f3-5-5-6-lens">
+                                    Panasonic LUMIX G100
+                                </Link> for most of my photos!</li>
                                 <li>You can see my photo portfolio  <Link
-                                        className={internalLinkStyle}
-                                        target="_blank"
-                                        to="/projects/photo-portfolio">
-                                            here
-                                    </Link>! (Once I complete it, anyways...)</li>
+                                    className={internalLinkStyle}
+                                    target="_blank"
+                                    to="/projects/photo-portfolio">
+                                    here
+                                </Link>! (Once I complete it, anyways...)</li>
                             </ul>
                         </li>
                         <li className="Geometry Dash">
                             Geometry Dash
                             <ul className="pl-[2.4rem] list-[upper-roman]">
                                 <li>My hardest is currently <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://www.youtube.com/watch?v=-88D0mXLDqg">
-                                            <span className="italic">Future Funk </span> by JonathanGD
-                                    </Link>!</li>
+                                    className={externalLinkStyle}
+                                    target="_blank"
+                                    to="https://www.youtube.com/watch?v=-88D0mXLDqg">
+                                    <span className="italic">Future Funk </span> by JonathanGD
+                                </Link>!</li>
                                 <li>You can see my profile <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://gdbrowser.com/u/Primqd">
-                                            here
-                                    </Link>!</li>
+                                    className={externalLinkStyle}
+                                    target="_blank"
+                                    to="https://gdbrowser.com/u/Primqd">
+                                    here
+                                </Link>!</li>
                             </ul>
                         </li>
                         <li className="Minecraft">
@@ -205,11 +205,11 @@ function About() {
                                 <li>I used to play Hypixel Skyblock, although I've moved onto modded Minecraft currently.</li>
                                 <li>I enjoy TerraFirmaCraft and GregTech... pray for my playtime ;-;</li>
                                 <li>I'm currently playing through <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://modrinth.com/modpack/angel-tech-the-greg-age">
-                                            Angel Tech: The Greg Age
-                                    </Link> in my free time!</li>
+                                    className={externalLinkStyle}
+                                    target="_blank"
+                                    to="https://modrinth.com/modpack/angel-tech-the-greg-age">
+                                    Angel Tech: The Greg Age
+                                </Link> in my free time!</li>
                             </ul>
                         </li>
                     </ul>

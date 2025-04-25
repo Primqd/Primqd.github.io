@@ -11,7 +11,7 @@ function Home() {
                 <p className="max-w-lg text-lg text-gray-400">
                     This is my personal website, where I do all sorts of shenanigans.
                     Check out the <Link className={internalLinkStyle} to="/projects">projects</Link> and <Link className={internalLinkStyle} to="/games">games</Link> pages to see more.
-                    Or, if you'd like to learn more about me, check out my <Link className={internalLinkStyle} to="/about">about</Link> page! 
+                    Or, if you'd like to learn more about me, check out my <Link className={internalLinkStyle} to="/about">about</Link> page!
                 </p>
             </div>
             <figure className="max-w-lg">
