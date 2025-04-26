@@ -12,5 +12,3 @@ export const PhotoPortfolio: React.FC = () => {
         <PhotoHacks />
     </div>
 }
-
-export default PhotoPortfolio
