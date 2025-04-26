@@ -1,5 +1,4 @@
 // a. Title (First and Last name), subtitle (Photographer), header image (must be yours)
-// Artist bio/statement: 90 word min. - type in Microsoft Word to check the word count * (see resources for how to write artist statement
 
 // https://v1.tailwindcss.com/course/cropping-and-positioning-images photo manipulation :)
 
