@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const externalLinkStyle = "text-cyan-500 hover:underline"; // links to other websites
 const internalLinkStyle = "font-semibold text-white hover:underline" // links to subpages
 
-function About() {
+export const About: React.FC = () => {
     return <div className="bg-neutral-800 text-white pt-[5rem] min-h-screen">
         <div className="flex px-[min(5rem,10%)] pt-[min(4rem,10%)]">
             <div className="yap align-middle">
@@ -240,5 +240,3 @@ function About() {
         </div>
     </div>
 }
-
-export default About;

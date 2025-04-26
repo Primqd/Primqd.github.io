@@ -20,8 +20,4 @@ export const PhotoHeader: React.FC<PhotoHeaderProps> = (
                 {/* <figcaption className="mt-2 text-sm text-center text-gray-400 italic">Picture unrelated.</figcaption> */}
             </figure>
         </div>);
-
 }
-
-
-export default PhotoHeader

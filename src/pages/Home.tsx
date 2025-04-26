@@ -3,7 +3,7 @@ import pig from "../assets/pig.png"
 
 const internalLinkStyle = "font-semibold text-white hover:underline" // links to subpages
 
-function Home() {
+export const Home: React.FC = () => {
     return <div className="bg-neutral-800 text-white pt-[5rem] min-h-screen">
         <div className="flex justify-center items-center gap-[35%] px-[5rem] pt-[8rem]">
             <div className="yap align-middle">

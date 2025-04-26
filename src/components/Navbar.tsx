@@ -8,11 +8,11 @@ import "../index.css";
 const liStyle = "w-1/4";
 const buttonStyle = "z-1 h-full w-full text-[1.2rem] text-white transition duration-300 hover:bg-neutral-600 active:bg-neutral-400"; //border-b-4 border-neutral-800
 
-function Navbar() {
+export const Navbar: React.FC = () => {
     return (
         <nav className="bg-neutral-700 z-50 h-[5rem] w-[100%] fixed top-0">
             <div className="h-1/2 w-full overflow-hidden relative flex"> {/* top header stuff*/}
-                <img className="absolute h-full w-full object-none z-0" src={debugNavbarArt} alt="generic navbar art"/>
+                <img className="absolute h-full w-full object-none z-0" src={debugNavbarArt} alt="generic navbar art" />
                 <div className="flex w-full items-center justify-center">
                     <Link to="/" className="absolute h-full text-[2rem] flex items-center justify-center z-1 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-white to-blue-700 font-bold">Franklin Chen</Link>
                 </div>

@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './index.css'
 
-import Navbar from './components/Navbar';
+import { Navbar } from './components/Navbar';
 
-import Home from './pages/Home';
-import Games from './pages/Games';
-import Projects from './pages/Projects';
-import About from './pages/About';
-import PhotoPortfolio from './projects/photo-portfolio/portfolio';
+import { Home } from './pages/Home';
+import { Games } from './pages/Games';
+import { Projects } from './pages/Projects';
+import { About } from './pages/About';
+import { PhotoPortfolio } from './projects/photo-portfolio/portfolio';
 
 const HideNavbarPages = [ // pages to hide navbar
   "/projects/photo-portfolio"

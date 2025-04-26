@@ -1,9 +1,9 @@
 import test from "../assets/debug_navbar_art.png"
 import pig from "../assets/pig.png"
 
-import Project from "../components/Project";
+import { Project } from "../components/Project";
 
-function Projects() {
+export const Projects: React.FC = () => {
     return <div className="bg-neutral-800 text-white pt-[5rem] pb-[4rem] min-h-screen max-w-screen items-center flex flex-col">
         <Project
             title="Lorem Ipsum"
@@ -48,5 +48,3 @@ function Projects() {
         />
     </div>
 }
-
-export default Projects;
