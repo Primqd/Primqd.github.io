@@ -7,7 +7,7 @@ import { Home } from './pages/Home';
 import { Games } from './pages/Games';
 import { Projects } from './pages/Projects';
 import { About } from './pages/About';
-import { PhotoPortfolio } from './projects/photo-portfolio/portfolio';
+import { PhotoPortfolio } from './projects/photo-portfolio/PhotoPortfolio';
 
 const HideNavbarPages = [ // pages to hide navbar
   "/projects/photo-portfolio"
