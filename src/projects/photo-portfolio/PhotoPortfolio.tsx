@@ -1,7 +1,7 @@
-import { PhotoHacks } from "./components/hacks"
-import { PhotoHeader } from "./components/header"
-import { PhotoProjects } from "./components/projects"
-import { PhotoWeekly } from "./components/wp"
+import { PhotoHacks } from "./components/PhotoHacks"
+import { PhotoHeader } from "./components/PhotoHeader"
+import { PhotoProjects } from "./components/PhotoProjects"
+import { PhotoWeekly } from "./components/PhotoWeekly"
 import pig from "../../assets/pig.png"
 
 export const PhotoPortfolio: React.FC = () => {
