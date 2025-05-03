@@ -30,7 +30,9 @@ export const Photo: React.FC<PhotoProps> = ({ photo, title, description, photo_s
             </ModalHeader>
             <ModalBody>
                 <figure>
-                    <img src={photo} />
+                    <a target="_blank" href={photo}>
+                        <img src={photo} />
+                    </a>
                 </figure>
             </ModalBody>
             <ModalFooter className="text-white">
