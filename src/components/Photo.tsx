@@ -19,7 +19,7 @@ export const Photo: React.FC<PhotoProps> = ({ photo, title, description, photo_s
 
     return <>
         <Link to="#" onClick={() => setModalOpen(true)}>
-            <img src={photo} className={photo_style} />
+            <img src={photo} className={photo_style} alt={title} />
         </Link>
         <Modal
             dismissible
@@ -31,7 +31,7 @@ export const Photo: React.FC<PhotoProps> = ({ photo, title, description, photo_s
             <ModalBody>
                 <figure>
                     <a target="_blank" href={photo}>
-                        <img src={photo} />
+                        <img src={photo} alt={title} />
                     </a>
                 </figure>
             </ModalBody>
