@@ -5,10 +5,13 @@
 // § MPC 3 - Your Choice
 // Final (MPC4) - Your Art, Your Choice
 
+import { Photo } from "../../../components/Photo"
+
 export const PhotoProjects: React.FC = () => {
     return (
         <div>
             <h1>Projects</h1>
+            <Photo photo="https://flowbite-react.com/docs/images/carousel/carousel-1.png" description="Photo 1" photo_style="style 1" />
         </div>
     )
 }
