@@ -18,7 +18,9 @@ export const Photo: React.FC<PhotoProps> = ({ photo, title, description, photo_s
     const [modalOpen, setModalOpen] = useState(false);
 
     return <>
-        <Link to="#" onClick={() => setModalOpen(true)}>test</Link>
+        <Link to="#" onClick={() => setModalOpen(true)}>
+            <img src={photo} className={photo_style} />
+        </Link>
         <Modal
             dismissible
             show={modalOpen}
@@ -28,7 +30,7 @@ export const Photo: React.FC<PhotoProps> = ({ photo, title, description, photo_s
             </ModalHeader>
             <ModalBody>
                 <figure>
-                    <img src={photo} className={photo_style} />
+                    <img src={photo} />
                 </figure>
             </ModalBody>
             <ModalFooter className="text-white">
