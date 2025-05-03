@@ -6,12 +6,13 @@
 // Final (MPC4) - Your Art, Your Choice
 
 import { Photo } from "../../../components/Photo"
+import pig from "../../../assets/pig.png"
 
 export const PhotoProjects: React.FC = () => {
     return (
         <div>
             <h1>Projects</h1>
-            <Photo photo="https://flowbite-react.com/docs/images/carousel/carousel-1.png" description="Photo 1" photo_style="style 1" />
+            <Photo photo={pig} title="Photo 1" description="Weekly Photo" photo_style="style 1" />
         </div>
     )
 }

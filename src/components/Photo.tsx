@@ -3,15 +3,38 @@
 
 "use client";
 
-import { Modal } from "flowbite-react";
+import { Modal, ModalBody, ModalFooter, ModalHeader } from "flowbite-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 type PhotoProps = {
     photo: string;
+    title: string;
     description: string;
     photo_style: string;
 }
 
-export const Photo: React.FC<PhotoProps> = ({ photo, description, photo_style }) => {
-    return <>{[photo, description, photo_style]}</>
+export const Photo: React.FC<PhotoProps> = ({ photo, title, description, photo_style }) => {
+    const [modalOpen, setModalOpen] = useState(false);
+
+    return <>
+        <Link to="#" onClick={() => setModalOpen(true)}>test</Link>
+        <Modal
+            dismissible
+            show={modalOpen}
+            onClose={() => setModalOpen(false)}>
+            <ModalHeader className="bg-neutral-800 text-white">
+                {title}
+            </ModalHeader>
+            <ModalBody>
+                <figure>
+                    <img src={photo} className={photo_style} />
+                </figure>
+            </ModalBody>
+            <ModalFooter className="text-white">
+                {description}
+            </ModalFooter>
+
+        </Modal>
+    </>
 }
