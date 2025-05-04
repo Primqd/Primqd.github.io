@@ -24,7 +24,28 @@ type MPCProps = {
     edit_2: string;
 }
 
-const MPCStyle = "h-[100%] object-contain place-self-center rounded-lg";
+type MPCPhotoProps = {
+    title: string;
+    photo: string;
+    description: string;
+    subtitle: string;
+}
+
+const MPCPhoto: React.FC<MPCPhotoProps> = ({ title, photo, description, subtitle }) => {
+    return (
+        <>
+            <Photo
+                photo={photo}
+                title={title}
+                description={description}
+                photo_style={"h-[90%] object-contain place-self-center rounded-lg align-top p-16"}
+            />
+            <h3 className="z-500">
+                {subtitle}
+            </h3>
+        </>
+    )
+}
 
 const MPC: React.FC<MPCProps> = ({ title, description, contact_sheet, edit_1, edit_2 }) => {
     return (
@@ -35,23 +56,23 @@ const MPC: React.FC<MPCProps> = ({ title, description, contact_sheet, edit_1, ed
             </div>
             <div className="max-w-[70%]">
                 <Carousel slide={false}>
-                    <Photo
+                    <MPCPhoto
                         photo={contact_sheet}
                         title="Contact Sheet"
                         description="Contact Sheet for the project"
-                        photo_style={MPCStyle}
+                        subtitle="Contact Sheet"
                     />
-                    <Photo
+                    <MPCPhoto
                         photo={edit_1}
                         title="Edit 1"
                         description="First edit of the project"
-                        photo_style={MPCStyle}
+                        subtitle="Edit 1"
                     />
-                    <Photo
+                    <MPCPhoto
                         photo={edit_2}
                         title="Edit 2"
                         description="Second edit of the project"
-                        photo_style={MPCStyle}
+                        subtitle="Edit 2"
                     />
                 </Carousel>
             </div>
