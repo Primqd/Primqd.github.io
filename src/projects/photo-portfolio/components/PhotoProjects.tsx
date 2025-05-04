@@ -5,6 +5,9 @@
 // § MPC 3 - Your Choice
 // Final (MPC4) - Your Art, Your Choice
 
+import { Carousel } from "flowbite-react"
+import { Photo } from "../../../components/Photo"
+
 import ChenF_MPC1_Pun_CS from "../../../assets/photo_portfolio/ChenF_MPC1_Pun_CS.jpg"
 import ChenF_MPC1_Pun_Edit_01 from "../../../assets/photo_portfolio/ChenF_MPC1_Pun_Edit_01.jpg"
 import ChenF_MPC1_Pun_Edit_02 from "../../../assets/photo_portfolio/ChenF_MPC1_Pun_Edit_02.jpg"
@@ -23,8 +26,33 @@ type PhotoProjectProps = {
 
 const PhotoProject: React.FC<PhotoProjectProps> = ({ title, description, contact_sheet, edit_1, edit_2 }) => {
     return (
-        <div className="text-left">
-            {title}{description}{contact_sheet}{edit_1}{edit_2}
+        <div className="p-12 flex flex-row text-left min-h-[30rem]">
+            <div className="p-1 flex flex-col w-[30%]">
+                <h1 className="object-left-top font-semibold text-4xl">{title}</h1>
+                <h3 className="object-left-bottom">{description}</h3>
+            </div>
+            <div className="w-[70%]">
+                <Carousel>
+                    <Photo
+                        photo={contact_sheet}
+                        title="Contact Sheet"
+                        description="Contact Sheet for the project"
+                        photo_style="object-contain h-[30rem] w-[30rem] rounded-lg"
+                    />
+                    <Photo
+                        photo={edit_1}
+                        title="Edit 1"
+                        description="First edit of the project"
+                        photo_style="object-contain h-[30rem] w-[30rem] rounded-lg"
+                    />
+                    <Photo
+                        photo={edit_2}
+                        title="Edit 2"
+                        description="Second edit of the project"
+                        photo_style="object-contain h-[30rem] w-[30rem] rounded-lg"
+                    />
+                </Carousel>
+            </div>
         </div>
     )
 }
@@ -32,7 +60,7 @@ const PhotoProject: React.FC<PhotoProjectProps> = ({ title, description, contact
 export const PhotoProjects: React.FC = () => {
     return (
         <div className="max-w-screen flex flex-col justify-center">
-            <h2 className="py-4 font-semibold text-5xl whitespace-nowrap text-center">Projects</h2>
+            <h2 className="pt-4 font-semibold text-5xl whitespace-nowrap text-center">Projects</h2>
             <PhotoProject
                 title="MPC 1: Pun"
                 description="test"
