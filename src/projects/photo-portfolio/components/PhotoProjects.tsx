@@ -38,9 +38,9 @@ const MPCPhoto: React.FC<MPCPhotoProps> = ({ title, photo, description, subtitle
                 photo={photo}
                 title={title}
                 description={description}
-                photo_style={"h-[90%] object-contain place-self-center rounded-lg align-top p-16"}
+                photo_style={"h-[100%] object-contain place-self-center rounded-lg align-top p-16"}
             />
-            <h3 className="z-500">
+            <h3 className="absolute text-center text-2xl top-0 left-0 right-0 p-4">
                 {subtitle}
             </h3>
         </>
@@ -60,23 +60,23 @@ const MPC: React.FC<MPCProps> = ({ title, description, contact_sheet, edit_1, ed
                         photo={contact_sheet}
                         title="Contact Sheet"
                         description="Contact Sheet for the project"
-                        subtitle="Contact Sheet"
+                        subtitle="MPC1 Contact Sheet"
                     />
                     <MPCPhoto
                         photo={edit_1}
                         title="Edit 1"
                         description="First edit of the project"
-                        subtitle="Edit 1"
+                        subtitle={`Edit 1: "A drop in the bucket"`}
                     />
                     <MPCPhoto
                         photo={edit_2}
                         title="Edit 2"
                         description="Second edit of the project"
-                        subtitle="Edit 2"
+                        subtitle={`Edit 2: "We don't see eye to eye"`}
                     />
                 </Carousel>
             </div>
-        </div>
+        </div >
     )
 }
 
