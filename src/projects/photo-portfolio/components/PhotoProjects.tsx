@@ -31,25 +31,25 @@ const PhotoProject: React.FC<PhotoProjectProps> = ({ title, description, contact
                 <h1 className="object-left-top font-semibold text-4xl">{title}</h1>
                 <h3 className="object-left-bottom">{description}</h3>
             </div>
-            <div className="w-[70%]">
+            <div className="w-[70%] max-h-[100%]">
                 <Carousel>
                     <Photo
                         photo={contact_sheet}
                         title="Contact Sheet"
                         description="Contact Sheet for the project"
-                        photo_style="object-contain h-[30rem] w-[30rem] rounded-lg"
+                        photo_style="object-contain rounded-lg"
                     />
                     <Photo
                         photo={edit_1}
                         title="Edit 1"
                         description="First edit of the project"
-                        photo_style="object-contain h-[30rem] w-[30rem] rounded-lg"
+                        photo_style="object-contain rounded-lg"
                     />
                     <Photo
                         photo={edit_2}
                         title="Edit 2"
                         description="Second edit of the project"
-                        photo_style="object-contain h-[30rem] w-[30rem] rounded-lg"
+                        photo_style="object-contain rounded-lg"
                     />
                 </Carousel>
             </div>
