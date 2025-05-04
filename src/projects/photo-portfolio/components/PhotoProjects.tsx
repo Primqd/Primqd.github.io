@@ -16,7 +16,7 @@ import ChenF_MPC2_Product_CS from "../../../assets/photo_portfolio/ChenF_MPC2_Pr
 import ChenF_MPC2_Product_Edit_02 from "../../../assets/photo_portfolio/ChenF_MPC2_Product_Edit_02.jpg"
 import ChenF_MPC2_Product_Edit_07 from "../../../assets/photo_portfolio/ChenF_MPC2_Product_Edit_07.jpg"
 
-type PhotoProjectProps = {
+type MPCProps = {
     title: string;
     description: string;
     contact_sheet: string;
@@ -24,20 +24,20 @@ type PhotoProjectProps = {
     edit_2: string;
 }
 
-const PhotoProject: React.FC<PhotoProjectProps> = ({ title, description, contact_sheet, edit_1, edit_2 }) => {
+const MPC: React.FC<MPCProps> = ({ title, description, contact_sheet, edit_1, edit_2 }) => {
     return (
-        <div className="p-12 flex flex-row text-left min-h-[30rem]">
+        <div className="p-12 flex flex-row text-left max-h-[40rem]">
             <div className="p-1 flex flex-col w-[30%]">
                 <h1 className="object-left-top font-semibold text-4xl">{title}</h1>
                 <h3 className="object-left-bottom">{description}</h3>
             </div>
-            <div className="w-[70%] max-h-[100%]">
-                <Carousel>
+            <div className="max-w-[70%]">
+                <Carousel slide={false}>
                     <Photo
                         photo={contact_sheet}
                         title="Contact Sheet"
                         description="Contact Sheet for the project"
-                        photo_style="object-contain rounded-lg"
+                        photo_style="h-[100%] object-contain rounded-lg"
                     />
                     <Photo
                         photo={edit_1}
@@ -61,7 +61,7 @@ export const PhotoProjects: React.FC = () => {
     return (
         <div className="max-w-screen flex flex-col justify-center">
             <h2 className="pt-4 font-semibold text-5xl whitespace-nowrap text-center">Projects</h2>
-            <PhotoProject
+            <MPC
                 title="MPC 1: Pun"
                 description="test"
                 contact_sheet={ChenF_MPC1_Pun_CS}
