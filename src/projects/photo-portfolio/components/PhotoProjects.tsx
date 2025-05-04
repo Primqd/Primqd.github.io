@@ -24,6 +24,8 @@ type MPCProps = {
     edit_2: string;
 }
 
+const MPCStyle = "h-[100%] object-contain place-self-center rounded-lg";
+
 const MPC: React.FC<MPCProps> = ({ title, description, contact_sheet, edit_1, edit_2 }) => {
     return (
         <div className="p-12 flex flex-row text-left max-h-[40rem]">
@@ -37,19 +39,19 @@ const MPC: React.FC<MPCProps> = ({ title, description, contact_sheet, edit_1, ed
                         photo={contact_sheet}
                         title="Contact Sheet"
                         description="Contact Sheet for the project"
-                        photo_style="h-[100%] object-contain rounded-lg"
+                        photo_style={MPCStyle}
                     />
                     <Photo
                         photo={edit_1}
                         title="Edit 1"
                         description="First edit of the project"
-                        photo_style="object-contain rounded-lg"
+                        photo_style={MPCStyle}
                     />
                     <Photo
                         photo={edit_2}
                         title="Edit 2"
                         description="Second edit of the project"
-                        photo_style="object-contain rounded-lg"
+                        photo_style={MPCStyle}
                     />
                 </Carousel>
             </div>
