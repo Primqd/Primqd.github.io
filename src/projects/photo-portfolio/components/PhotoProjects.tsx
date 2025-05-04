@@ -28,10 +28,9 @@ type MPCPhotoProps = {
     title: string;
     photo: string;
     description: string;
-    subtitle: string;
 }
 
-const MPCPhoto: React.FC<MPCPhotoProps> = ({ title, photo, description, subtitle }) => {
+const MPCPhoto: React.FC<MPCPhotoProps> = ({ title, photo, description }) => {
     return (
         <>
             <Photo
@@ -41,7 +40,7 @@ const MPCPhoto: React.FC<MPCPhotoProps> = ({ title, photo, description, subtitle
                 photo_style={"h-[100%] object-contain place-self-center rounded-lg align-top p-16"}
             />
             <h3 className="absolute text-center text-2xl top-0 left-0 right-0 p-4">
-                {subtitle}
+                {title}
             </h3>
         </>
     )
@@ -50,29 +49,26 @@ const MPCPhoto: React.FC<MPCPhotoProps> = ({ title, photo, description, subtitle
 const MPC: React.FC<MPCProps> = ({ title, description, contact_sheet, edit_1, edit_2 }) => {
     return (
         <div className="p-12 flex flex-row text-left max-h-[40rem]">
-            <div className="p-1 flex flex-col w-[30%]">
+            <div className="p-1 flex flex-col w-[40%]">
                 <h1 className="object-left-top font-semibold text-4xl">{title}</h1>
                 <h3 className="object-left-bottom">{description}</h3>
             </div>
-            <div className="max-w-[70%]">
+            <div className="w-[60%]">
                 <Carousel slide={false}>
                     <MPCPhoto
                         photo={contact_sheet}
-                        title="Contact Sheet"
+                        title="MPC1 Contact Sheet"
                         description="Contact Sheet for the project"
-                        subtitle="MPC1 Contact Sheet"
                     />
                     <MPCPhoto
                         photo={edit_1}
-                        title="Edit 1"
+                        title={`Edit 1: "A drop in the bucket"`}
                         description="First edit of the project"
-                        subtitle={`Edit 1: "A drop in the bucket"`}
                     />
                     <MPCPhoto
                         photo={edit_2}
-                        title="Edit 2"
+                        title={`Edit 2: "We don't see eye to eye"`}
                         description="Second edit of the project"
-                        subtitle={`Edit 2: "We don't see eye to eye"`}
                     />
                 </Carousel>
             </div>
