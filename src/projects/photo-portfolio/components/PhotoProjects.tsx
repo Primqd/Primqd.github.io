@@ -49,12 +49,12 @@ const MPCPhoto: React.FC<MPCPhotoProps> = ({ title, photo, description }) => {
 const MPC: React.FC<MPCProps> = ({ title, description, contact_sheet, edit_1, edit_2 }) => {
     return (
         <div className="p-12 flex flex-row text-left max-h-[40rem]">
-            <div className="p-1 flex flex-col w-[40%]">
-                <h1 className="object-left-top font-semibold text-4xl">{title}</h1>
-                <h3 className="object-left-bottom">{description}</h3>
+            <div className="p-4 flex flex-col w-[40%]">
+                <h1 className="font-semibold text-4xl">{title}</h1>
+                <h3 className="pt-2 text-xl/8">{description}</h3>
             </div>
             <div className="w-[60%]">
-                <Carousel slide={false}>
+                <Carousel pauseOnHover slideInterval={5000}>
                     <MPCPhoto
                         photo={contact_sheet}
                         title="MPC1 Contact Sheet"
@@ -82,7 +82,13 @@ export const PhotoProjects: React.FC = () => {
             <h2 className="pt-4 font-semibold text-5xl whitespace-nowrap text-center">Projects</h2>
             <MPC
                 title="MPC 1: Pun"
-                description="test"
+                description={`
+                    For my first Mini Photo Challenge, I decided to choose the theme "pun," literally showing a pun in action.
+                    I decided to photograph the puns "we don't see eye to eye," "I can't focus," and "a drop in the bucket."
+                    For the first pun, I took a photo of myself looking at and away from a mirror, then cropped them together in Photoshop for the final edit.
+                    For the second pun, I intentionally took off my lens to get an extreme close-up and low focus effect.
+                    Finally, for the third pun, I used low aperature and high shutter speed to capture a drop of water falling into a bucket.
+                `}
                 contact_sheet={ChenF_MPC1_Pun_CS}
                 edit_1={ChenF_MPC1_Pun_Edit_01}
                 edit_2={ChenF_MPC1_Pun_Edit_02}
