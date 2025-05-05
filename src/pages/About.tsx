@@ -175,7 +175,6 @@ export const About: React.FC = () => {
                                 </Link> for most of my photos!</li>
                                 <li>You can see my photo portfolio  <Link
                                     className={internalLinkStyle}
-                                    target="_blank"
                                     to="/projects/photo-portfolio">
                                     here
                                 </Link>! (Once I complete it, anyways...)</li>
