@@ -4,17 +4,16 @@
 "use client";
 
 import { Modal, ModalBody, ModalFooter, ModalHeader } from "flowbite-react";
-import { useState } from "react";
+import { PropsWithChildren, useState } from "react";
 import { Link } from "react-router-dom";
 
 type PhotoProps = {
     photo: string;
     title: string;
-    description: string;
     photo_style: string;
 }
 
-export const Photo: React.FC<PhotoProps> = ({ photo, title, description, photo_style }) => {
+export const Photo: React.FC<PropsWithChildren<PhotoProps>> = ({ photo, title, photo_style, children }) => {
     const [modalOpen, setModalOpen] = useState(false);
 
     return <>
@@ -36,7 +35,7 @@ export const Photo: React.FC<PhotoProps> = ({ photo, title, description, photo_s
                 </figure>
             </ModalBody>
             <ModalFooter className="text-white">
-                {description}
+                {children}
             </ModalFooter>
 
         </Modal>

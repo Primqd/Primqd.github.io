@@ -34,9 +34,10 @@ const MPCPhoto: React.FC<MPCPhotoProps> = ({ title, photo, description }) => {
             <Photo
                 photo={photo}
                 title={title}
-                description={description}
                 photo_style={"h-[100%] object-contain place-self-center rounded-lg align-top p-16"}
-            />
+            >
+                {description}
+            </Photo>
             <h3 className="absolute text-center text-2xl top-0 left-0 right-0 p-4">
                 {title}
             </h3>
@@ -106,12 +107,12 @@ export const PhotoProjects: React.FC = () => {
                 />
                 <MPCPhoto
                     photo={ChenF_MPC2_Product_Edit_02}
-                    title={`Edit 1: "Water Bottle and Glass"`}
+                    title={`Edit 1: Watch`}
                     description="First edit of the project"
                 />
                 <MPCPhoto
                     photo={ChenF_MPC2_Product_Edit_07}
-                    title={`Edit 2: "Drop of Water in a Bucket"`}
+                    title={`Edit 2: Prism`}
                     description="Second edit of the project"
                 />
             </MPC>
