@@ -94,10 +94,11 @@ export const PhotoProjects: React.FC = () => {
             <MPC
                 title="MPC 2: Product"
                 description={`
-                For my second Mini Photo Challenge, I decided to choose the theme "product," literally showing a product in action.
-                I decided to photograph the product "water," using a water bottle and a glass of water as my subjects.
-                For the first edit, I took a photo of the water bottle and glass of water, then cropped them together in Photoshop for the final edit.
-                For the second edit, I used low aperature and high shutter speed to capture a drop of water falling into a bucket.
+                For my second Mini Photo Challenge, I decided to choose the theme "product," attempting to "sell" a product using photography.
+                I decided to photograph my watch (Casio MQ24 Series), a set of prisms, and some shoes.
+                For the first photo, I took a photo of my watch against black plastic background, using my computer screen to reflect a fake bokoeh behind the watch.
+                And for the edit, I cropped the image for a central focus and slightly tweaked the exposure and contrast.
+                For the second edit, I used low aperature to focus on the prism itself, decreasing the temperature slightly in post to bring out the blue color.
             `}
             >
                 <MPCPhoto
