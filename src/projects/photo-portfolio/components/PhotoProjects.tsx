@@ -93,6 +93,18 @@ export const PhotoProjects: React.FC = () => {
                 edit_1={ChenF_MPC1_Pun_Edit_01}
                 edit_2={ChenF_MPC1_Pun_Edit_02}
             />
+            <MPC
+                title="MPC 2: Product"
+                description={`
+                    For my second Mini Photo Challenge, I decided to choose the theme "product," literally showing a product in action.
+                    I decided to photograph the product "water," using a water bottle and a glass of water as my subjects.
+                    For the first edit, I took a photo of the water bottle and glass of water, then cropped them together in Photoshop for the final edit.
+                    For the second edit, I used low aperature and high shutter speed to capture a drop of water falling into a bucket.
+                `}
+                contact_sheet={ChenF_MPC2_Product_CS}
+                edit_1={ChenF_MPC2_Product_Edit_02}
+                edit_2={ChenF_MPC2_Product_Edit_07}
+            />
         </div>
     )
 }
