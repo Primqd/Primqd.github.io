@@ -15,13 +15,11 @@ import ChenF_MPC1_Pun_Edit_02 from "../../../assets/photo_portfolio/ChenF_MPC1_P
 import ChenF_MPC2_Product_CS from "../../../assets/photo_portfolio/ChenF_MPC2_Product_CS.png"
 import ChenF_MPC2_Product_Edit_02 from "../../../assets/photo_portfolio/ChenF_MPC2_Product_Edit_02.jpg"
 import ChenF_MPC2_Product_Edit_07 from "../../../assets/photo_portfolio/ChenF_MPC2_Product_Edit_07.jpg"
+import { PropsWithChildren } from "react"
 
 type MPCProps = {
     title: string;
     description: string;
-    contact_sheet: string;
-    edit_1: string;
-    edit_2: string;
 }
 
 type MPCPhotoProps = {
@@ -46,7 +44,7 @@ const MPCPhoto: React.FC<MPCPhotoProps> = ({ title, photo, description }) => {
     )
 }
 
-const MPC: React.FC<MPCProps> = ({ title, description, contact_sheet, edit_1, edit_2 }) => {
+const MPC: React.FC<PropsWithChildren<MPCProps>> = ({ title, description, children }) => {
     return (
         <div className="p-12 flex flex-row text-left max-h-[40rem]">
             <div className="p-4 flex flex-col w-[40%]">
@@ -55,21 +53,7 @@ const MPC: React.FC<MPCProps> = ({ title, description, contact_sheet, edit_1, ed
             </div>
             <div className="w-[60%]">
                 <Carousel pauseOnHover slideInterval={5000}>
-                    <MPCPhoto
-                        photo={contact_sheet}
-                        title="MPC1 Contact Sheet"
-                        description="Contact Sheet for the project"
-                    />
-                    <MPCPhoto
-                        photo={edit_1}
-                        title={`Edit 1: "A drop in the bucket"`}
-                        description="First edit of the project"
-                    />
-                    <MPCPhoto
-                        photo={edit_2}
-                        title={`Edit 2: "We don't see eye to eye"`}
-                        description="Second edit of the project"
-                    />
+                    {children}
                 </Carousel>
             </div>
         </div >
@@ -83,28 +67,54 @@ export const PhotoProjects: React.FC = () => {
             <MPC
                 title="MPC 1: Pun"
                 description={`
-                    For my first Mini Photo Challenge, I decided to choose the theme "pun," literally showing a pun in action.
-                    I decided to photograph the puns "we don't see eye to eye," "I can't focus," and "a drop in the bucket."
-                    For the first pun, I took a photo of myself looking at and away from a mirror, then cropped them together in Photoshop for the final edit.
-                    For the second pun, I intentionally took off my lens to get an extreme close-up and low focus effect.
-                    Finally, for the third pun, I used low aperature and high shutter speed to capture a drop of water falling into a bucket.
-                `}
-                contact_sheet={ChenF_MPC1_Pun_CS}
-                edit_1={ChenF_MPC1_Pun_Edit_01}
-                edit_2={ChenF_MPC1_Pun_Edit_02}
-            />
+                For my first Mini Photo Challenge, I decided to choose the theme "pun," literally showing a pun in action.
+                I decided to photograph the puns "we don't see eye to eye," "I can't focus," and "a drop in the bucket."
+                For the first pun, I took a photo of myself looking at and away from a mirror, then cropped them together in Photoshop for the final edit.
+                For the second pun, I intentionally took off my lens to get an extreme close-up and low focus effect.
+                Finally, for the third pun, I used low aperature and high shutter speed to capture a drop of water falling into a bucket.
+            `}
+            >
+                <MPCPhoto
+                    photo={ChenF_MPC1_Pun_CS}
+                    title="MPC1 Contact Sheet"
+                    description="Contact Sheet for the project"
+                />
+                <MPCPhoto
+                    photo={ChenF_MPC1_Pun_Edit_01}
+                    title={`Edit 1: "A drop in the bucket"`}
+                    description="First edit of the project"
+                />
+                <MPCPhoto
+                    photo={ChenF_MPC1_Pun_Edit_02}
+                    title={`Edit 2: "We don't see eye to eye"`}
+                    description="Second edit of the project"
+                />
+            </MPC>
             <MPC
                 title="MPC 2: Product"
                 description={`
-                    For my second Mini Photo Challenge, I decided to choose the theme "product," literally showing a product in action.
-                    I decided to photograph the product "water," using a water bottle and a glass of water as my subjects.
-                    For the first edit, I took a photo of the water bottle and glass of water, then cropped them together in Photoshop for the final edit.
-                    For the second edit, I used low aperature and high shutter speed to capture a drop of water falling into a bucket.
-                `}
-                contact_sheet={ChenF_MPC2_Product_CS}
-                edit_1={ChenF_MPC2_Product_Edit_02}
-                edit_2={ChenF_MPC2_Product_Edit_07}
-            />
+                For my second Mini Photo Challenge, I decided to choose the theme "product," literally showing a product in action.
+                I decided to photograph the product "water," using a water bottle and a glass of water as my subjects.
+                For the first edit, I took a photo of the water bottle and glass of water, then cropped them together in Photoshop for the final edit.
+                For the second edit, I used low aperature and high shutter speed to capture a drop of water falling into a bucket.
+            `}
+            >
+                <MPCPhoto
+                    photo={ChenF_MPC2_Product_CS}
+                    title="MPC2 Contact Sheet"
+                    description="Contact Sheet for the project"
+                />
+                <MPCPhoto
+                    photo={ChenF_MPC2_Product_Edit_02}
+                    title={`Edit 1: "Water Bottle and Glass"`}
+                    description="First edit of the project"
+                />
+                <MPCPhoto
+                    photo={ChenF_MPC2_Product_Edit_07}
+                    title={`Edit 2: "Drop of Water in a Bucket"`}
+                    description="Second edit of the project"
+                />
+            </MPC>
         </div>
     )
 }
