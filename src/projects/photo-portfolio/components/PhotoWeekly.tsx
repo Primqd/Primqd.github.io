@@ -12,13 +12,16 @@ type WeeklyPhotoProps = {
 
 const WeeklyPhoto: React.FC<PropsWithChildren<WeeklyPhotoProps>> = ({ photo, title, children }) => {
     return (
-        <Photo
-            photo={photo}
-            photo_style="w-full h-[20rem] object-cover object-center brightness-75"
-            title={title}
-        >
-            {children}
-        </Photo>
+        <div className="relative w-[20rem] h-[20rem] m-5">
+            <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[16rem] text-center text-white font-semibold text-3xl pointer-events-none z-1">{title}</h1>
+            <Photo
+                photo={photo}
+                photo_style="w-[20rem] h-[20rem] object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                title={title}
+            >
+                {children}
+            </Photo>
+        </div>
     )
 }
 
