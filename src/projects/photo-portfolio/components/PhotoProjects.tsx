@@ -8,13 +8,13 @@
 import { Carousel } from "flowbite-react"
 import { Photo } from "../../../components/Photo"
 
-import ChenF_MPC1_Pun_CS from "../../../assets/photo_portfolio/ChenF_MPC1_Pun_CS.jpg"
-import ChenF_MPC1_Pun_Edit_01 from "../../../assets/photo_portfolio/ChenF_MPC1_Pun_Edit_01.jpg"
-import ChenF_MPC1_Pun_Edit_02 from "../../../assets/photo_portfolio/ChenF_MPC1_Pun_Edit_02.jpg"
+import ChenF_MPC1_Pun_CS from "../../../assets/photo_portfolio/MPC/ChenF_MPC1_Pun_CS.jpg"
+import ChenF_MPC1_Pun_Edit_01 from "../../../assets/photo_portfolio/MPC/ChenF_MPC1_Pun_Edit_01.jpg"
+import ChenF_MPC1_Pun_Edit_02 from "../../../assets/photo_portfolio/MPC/ChenF_MPC1_Pun_Edit_02.jpg"
 
-import ChenF_MPC2_Product_CS from "../../../assets/photo_portfolio/ChenF_MPC2_Product_CS.png"
-import ChenF_MPC2_Product_Edit_02 from "../../../assets/photo_portfolio/ChenF_MPC2_Product_Edit_02.jpg"
-import ChenF_MPC2_Product_Edit_07 from "../../../assets/photo_portfolio/ChenF_MPC2_Product_Edit_07.jpg"
+import ChenF_MPC2_Product_CS from "../../../assets/photo_portfolio/MPC/ChenF_MPC2_Product_CS.png"
+import ChenF_MPC2_Product_Edit_02 from "../../../assets/photo_portfolio/MPC/ChenF_MPC2_Product_Edit_02.jpg"
+import ChenF_MPC2_Product_Edit_07 from "../../../assets/photo_portfolio/MPC/ChenF_MPC2_Product_Edit_07.jpg"
 import { PropsWithChildren } from "react"
 
 type MPCProps = {
