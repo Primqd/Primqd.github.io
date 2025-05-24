@@ -1,9 +1,21 @@
 // d. Weekly photos section: Each weekly photo captioned with the prompt and number
 
 import React, { PropsWithChildren } from "react"
-import pig from "../../../assets/pig.png"
 import { Photo } from "../../../components/Photo"
 
+import WP_1 from "../../../assets/photo_portfolio/WP/ChenF_WP_01.jpg"
+import WP_2 from "../../../assets/photo_portfolio/WP/ChenF_WP_02.png"
+import WP_3 from "../../../assets/photo_portfolio/WP/ChenF_WP_03.jpg"
+import WP_4 from "../../../assets/photo_portfolio/WP/ChenF_WP_04.webp"
+import WP_5 from "../../../assets/photo_portfolio/WP/ChenF_WP_05.jpg"
+import WP_6 from "../../../assets/photo_portfolio/WP/ChenF_WP_06.jpg"
+import WP_7 from "../../../assets/photo_portfolio/WP/ChenF_WP_07.jpg"
+import WP_8 from "../../../assets/photo_portfolio/WP/ChenF_WP_08.webp"
+import WP_9 from "../../../assets/photo_portfolio/WP/ChenF_WP_09.jpg"
+import WP_10 from "../../../assets/photo_portfolio/WP/ChenF_WP_10.jpg"
+import WP_11 from "../../../assets/photo_portfolio/WP/ChenF_WP_11.jpg"
+import WP_12 from "../../../assets/photo_portfolio/WP/ChenF_WP_12.jpg"
+import WP_13 from "../../../assets/photo_portfolio/WP/ChenF_WP_13.jpg"
 
 type WeeklyPhotoProps = {
     photo: string,
@@ -31,7 +43,7 @@ export const PhotoWeekly: React.FC = () => {
         <div>
             <h2 className="pb-10 font-semibold text-5xl whitespace-nowrap text-center">Projects</h2>
             <WeeklyPhoto
-                photo={pig}
+                photo={WP_1}
                 title="WP1: My Life"
                 position="left-[50%] -translate-x-1/2"
             >
