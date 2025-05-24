@@ -13,8 +13,7 @@ import WP_7 from "../../../assets/photo_portfolio/WP/ChenF_WP_07.jpg"
 import WP_8 from "../../../assets/photo_portfolio/WP/ChenF_WP_08.webp"
 import WP_9 from "../../../assets/photo_portfolio/WP/ChenF_WP_09.jpg"
 import WP_10 from "../../../assets/photo_portfolio/WP/ChenF_WP_10.jpg"
-import WP_11 from "../../../assets/photo_portfolio/WP/ChenF_WP_11.jpg"
-import WP_12 from "../../../assets/photo_portfolio/WP/ChenF_WP_12.jpg"
+import WP_11_12 from "../../../assets/photo_portfolio/WP/ChenF_WP_11_12.jpg"
 import WP_13 from "../../../assets/photo_portfolio/WP/ChenF_WP_13.jpg"
 
 type WeeklyPhotoProps = {
@@ -84,12 +83,8 @@ export const PhotoWeekly: React.FC = () => {
                     title="WP10: Debug"
                 />
                 <WeeklyPhoto
-                    photo={WP_11}
-                    title="WP11: Debug"
-                />
-                <WeeklyPhoto
-                    photo={WP_12}
-                    title="WP12: Debug"
+                    photo={WP_11_12}
+                    title="WP11&12: Debug"
                 />
                 <WeeklyPhoto
                     photo={WP_13}
