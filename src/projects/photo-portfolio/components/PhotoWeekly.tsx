@@ -20,12 +20,11 @@ import WP_13 from "../../../assets/photo_portfolio/WP/ChenF_WP_13.jpg"
 type WeeklyPhotoProps = {
     photo: string,
     title: string,
-    position?: string,
 }
 
-const WeeklyPhoto: React.FC<PropsWithChildren<WeeklyPhotoProps>> = ({ photo, title, children, position }) => {
+const WeeklyPhoto: React.FC<PropsWithChildren<WeeklyPhotoProps>> = ({ photo, title, children}) => {
     return (
-        <div className={"relative w-[20rem] h-[20rem] absolute " + position}>
+        <div className={"relative w-[20rem] h-[20rem]"}>
             <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[16rem] text-center text-white font-semibold text-3xl pointer-events-none z-1">{title}</h1>
             <Photo
                 photo={photo}
