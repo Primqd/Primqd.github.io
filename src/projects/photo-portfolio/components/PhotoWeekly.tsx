@@ -24,11 +24,11 @@ type WeeklyPhotoProps = {
 
 const WeeklyPhoto: React.FC<PropsWithChildren<WeeklyPhotoProps>> = ({ photo, title, children}) => {
     return (
-        <div className={"relative w-[20rem] h-[20rem]"}>
-            <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[16rem] text-center text-white font-semibold text-3xl pointer-events-none z-1">{title}</h1>
+        <div className={"relative w-[25] h-[25vh]"}>
+            <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[16] text-center text-white font-semibold text-3xl pointer-events-none z-1">{title}</h1>
             <Photo
                 photo={photo}
-                photo_style="w-[20rem] h-[20rem] object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                photo_style="w-[100%] h-[100%] object-cover grayscale hover:grayscale-0 transition-all duration-300"
                 title={title}
             >
                 {children}
@@ -41,7 +41,7 @@ export const PhotoWeekly: React.FC = () => {
     return (
         <div>
             <h2 className="pb-10 font-semibold text-5xl whitespace-nowrap text-center">Projects</h2>
-            <div className="grid grid-cols-4">
+            <div className="min-w-[99vw] items-center grid grid-cols-4">
                 <WeeklyPhoto
                     photo={WP_1}
                     title="WP1: My Life"
