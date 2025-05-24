@@ -79,7 +79,7 @@ export const PhotoWeekly: React.FC = () => {
                         <p>WP12: This is a close-up photo of my nose, using my micro lens Originally, I planned to use much higher aperture to capture the texture better, but as it turns out it is nigh impossible to stay at a constant distance from a camera while adjusting the manual focus (the lens doesn't allow autofocus) while taking the photo itself. As such, I had to compromise by turning down the aperture significantly to turn the shutter speed high enough to get something... discernable, to say the least. Unfortunately, this causes the texture to kind of blend in and make it compositionally strange, but right now I can't access my camera to take a better photo. :/</p>
                     </div>
                 </WeeklyPhoto>
-                <WeeklyPhoto photo={WP_13} title="WP13: Debug">
+                <WeeklyPhoto photo={WP_13} title="WP13: Endings">
                     This is a photo of a road near my house that looks a lot shorter than it actually is. I used a medium aperature to capture the detail within the edges of the photo, but to make the rest of the trail sort of "fade away." I also used camera raw to turn up the highlights and darken the shadows to better emphasize the contrast.
                 </WeeklyPhoto>
             </div>
