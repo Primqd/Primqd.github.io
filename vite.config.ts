@@ -7,6 +7,7 @@ import flowbiteReact from "flowbite-react/plugin/vite";
 export default defineConfig({
   plugins: [react(), tailwindcss(), flowbiteReact()],
   // base : './', // relative paths in index.html
+  assetsInclude: ['**/*.JPG'],
   build : {
     outDir : 'dist', // deployed to ghpages
   },
