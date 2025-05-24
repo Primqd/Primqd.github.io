@@ -37,6 +37,7 @@ const WeeklyPhoto: React.FC<PropsWithChildren<WeeklyPhotoProps>> = ({ photo, tit
     )
 }
 
+// TODO: lags like shit when sliding over many elements
 export const PhotoWeekly: React.FC = () => {
     return (
         <div>
