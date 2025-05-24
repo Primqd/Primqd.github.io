@@ -42,13 +42,60 @@ export const PhotoWeekly: React.FC = () => {
     return (
         <div>
             <h2 className="pb-10 font-semibold text-5xl whitespace-nowrap text-center">Projects</h2>
-            <WeeklyPhoto
-                photo={WP_1}
-                title="WP1: My Life"
-                position="left-[50%] -translate-x-1/2"
-            >
-                This is my (unsorted) pile of clothes sitting in my room. I used back lighting to better emphasize the texture on the clothes. I used a bird's eye view to emphasize the overall texture, rather than one specific texture.
-            </WeeklyPhoto>
+            <div className="grid grid-cols-4">
+                <WeeklyPhoto
+                    photo={WP_1}
+                    title="WP1: My Life"
+                />
+                <WeeklyPhoto
+                    photo={WP_2}
+                    title="WP2: Debug"
+                />
+                <WeeklyPhoto
+                    photo={WP_3}
+                    title="WP3: Debug"
+                />
+                <WeeklyPhoto
+                    photo={WP_4}
+                    title="WP4: Debug"
+                />
+                <WeeklyPhoto
+                    photo={WP_5}
+                    title="WP5: Debug"
+                />
+                <WeeklyPhoto
+                    photo={WP_6}
+                    title="WP6: Debug"
+                />
+                <WeeklyPhoto
+                    photo={WP_7}
+                    title="WP7: Debug"
+                />
+                <WeeklyPhoto
+                    photo={WP_8}
+                    title="WP8: Debug"
+                />
+                <WeeklyPhoto
+                    photo={WP_9}
+                    title="WP9: Debug"
+                />
+                <WeeklyPhoto
+                    photo={WP_10}
+                    title="WP10: Debug"
+                />
+                <WeeklyPhoto
+                    photo={WP_11}
+                    title="WP11: Debug"
+                />
+                <WeeklyPhoto
+                    photo={WP_12}
+                    title="WP12: Debug"
+                />
+                <WeeklyPhoto
+                    photo={WP_13}
+                    title="WP13: Debug"
+                />
+            </div>
         </div>
     )
 }
