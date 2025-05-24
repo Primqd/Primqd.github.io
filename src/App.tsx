@@ -15,12 +15,12 @@ const HideNavbarPages = [ // pages to hide navbar
 
 function AppWrapper() { // wrapper for app component to use useLocation
   return <>
-    {!HideNavbarPages.includes(useLocation().pathname) && <Navbar />} {/*Hides the navbar if the current path is part of HideNavbarPages */}
+    {/* {!HideNavbarPages.includes(useLocation().pathname) && <Navbar />} Hides the navbar if the current path is part of HideNavbarPages */}
     <Routes>
-      <Route path='/' element={<Home />} />
+      {/* <Route path='/' element={<Home />} /> temporary removal for portfolio main*/}
       <Route path='/games' element={<Games />} />
       <Route path='/projects' element={<Projects />} />
-      <Route path='/projects/photo-portfolio' element={<PhotoPortfolio />} />
+      <Route path='/' element={<PhotoPortfolio />} />
       <Route path='/about' element={<About />} />
     </Routes>
   </>
