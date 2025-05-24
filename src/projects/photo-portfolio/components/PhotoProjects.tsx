@@ -53,7 +53,7 @@ const MPC: React.FC<PropsWithChildren<MPCProps>> = ({ title, description, childr
                 <h3 className="pt-2 text-xl/8">{description}</h3>
             </div>
             <div className="w-[60%]">
-                <Carousel pauseOnHover slideInterval={5000}>
+                <Carousel pauseOnHover slideInterval={30000}>
                     {children}
                 </Carousel>
             </div>
