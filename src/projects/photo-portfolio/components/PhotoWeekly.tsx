@@ -23,7 +23,7 @@ type WeeklyPhotoProps = {
 
 const WeeklyPhoto: React.FC<PropsWithChildren<WeeklyPhotoProps>> = ({ photo, title, children}) => {
     return (
-        <div className={"relative w-[25] h-[25vh]"}>
+        <div className={"w-[24.75vw] h-[25vh] relative"}>
             <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[16] text-center text-white font-semibold text-3xl pointer-events-none z-1">{title}</h1>
             <Photo
                 photo={photo}
