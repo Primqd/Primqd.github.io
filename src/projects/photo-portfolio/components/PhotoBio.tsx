@@ -13,7 +13,7 @@ export const PhotoBio: React.FC = () => {
             <p className="py-4 max-w-[60%] text-white text-xl/10">
                 Franklin Chen is a high school sophomore and practicing photographer in Seattle, WA.
                 Growing up surrounded by forests and art, he enjoys taking photos of nature and abstract ideas.
-                Over the last three years, he has honed his photography skills the last three years as a yearbook photographer and hobbyist photographer.
+                Over the last three years, he has honed his photography skills as a yearbook photographer and hobbyist photographer.
                 Franklin specializes in digital photography and digital design.
             </p>
         </div>
