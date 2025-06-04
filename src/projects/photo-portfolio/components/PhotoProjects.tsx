@@ -7,6 +7,7 @@
 
 import { Carousel } from "flowbite-react"
 import { Photo } from "../../../components/Photo"
+import { PropsWithChildren } from "react"
 
 import ChenF_MPC1_Pun_CS from "../../../assets/photo_portfolio/MPC/ChenF_MPC1_Pun_CS.jpg"
 import ChenF_MPC1_Pun_Edit_01 from "../../../assets/photo_portfolio/MPC/ChenF_MPC1_Pun_Edit_01.jpg"
@@ -15,7 +16,10 @@ import ChenF_MPC1_Pun_Edit_02 from "../../../assets/photo_portfolio/MPC/ChenF_MP
 import ChenF_MPC2_Product_CS from "../../../assets/photo_portfolio/MPC/ChenF_MPC2_Product_CS.png"
 import ChenF_MPC2_Product_Edit_02 from "../../../assets/photo_portfolio/MPC/ChenF_MPC2_Product_Edit_02.jpg"
 import ChenF_MPC2_Product_Edit_07 from "../../../assets/photo_portfolio/MPC/ChenF_MPC2_Product_Edit_07.jpg"
-import { PropsWithChildren } from "react"
+
+import ChenF_MPC3_Quote_CS from "../../../assets/photo_portfolio/MPC/ChenF_MPC3_Quote_CS.jpg"
+import ChenF_MPC3_Quote_Edit_05 from "../../../assets/photo_portfolio/MPC/ChenF_MPC3_Quote_Edit_05.jpg"
+import ChenF_MPC3_Quote_Edit_08 from "../../../assets/photo_portfolio/MPC/ChenF_MPC3_Quote_Edit_08.jpg"
 
 type MPCProps = {
     title: string;
