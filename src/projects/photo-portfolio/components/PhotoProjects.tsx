@@ -121,6 +121,32 @@ export const PhotoProjects: React.FC = () => {
                     description="Second edit of the project"
                 />
             </MPC>
+            <MPC
+                title="MPC 3: Quote"
+                description={`
+                For my third Mini Photo Challenge, I decided to choose the theme "quote," attempting to capture a quote in a photo.
+                I decided to photograph several quotes, including "The only thing worse than being blind is having sight but no vision," "Life could be a dream," and "Darkness cannot drive out darkness- only light can do that."
+                For the first edit, I took a photo of a flashlight through a tube, using low aperature to focus detail on the edges of the tube.
+                After adjusting some basic exposure and viginette, I used PhotoShop to "wrap" the quote around the edge of the tube.
+                For the second edit, I took a photo of the sky, using 3 exposure brackets to capture the full dynamic range of the sky.
+                `}
+            >
+                <MPCPhoto
+                    photo={ChenF_MPC3_Quote_CS}
+                    title="MPC3 Contact Sheet"
+                    description="Contact Sheet for the project"
+                />
+                <MPCPhoto
+                    photo={ChenF_MPC3_Quote_Edit_05}
+                    title={`Edit 1: "The only thing worse than being blind is having sight but no vision."`}
+                    description="First edit of the project"
+                />
+                <MPCPhoto
+                    photo={ChenF_MPC3_Quote_Edit_08}
+                    title={`Edit 2: "Darkness cannot drive out darkness- only light can do that."`}
+                    description="Second edit of the project"
+                />
+            </MPC>
         </div>
     )
 }
