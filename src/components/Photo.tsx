@@ -11,14 +11,24 @@ type PhotoProps = {
     photo: string;
     title: string;
     photo_style: string;
+    thumbnail?: string; // optional thumbnail for display
 }
 
-export const Photo: React.FC<PropsWithChildren<PhotoProps>> = ({ photo, title, photo_style, children }) => {
+/**
+ * Renders a photo with a clickable thumbnail that opens a modal dialog displaying the full image and additional content.
+ *
+ * @param photo - The URL of the photo to display.
+ * @param title - The title or alt text for the photo.
+ * @param photo_style - The CSS class name(s) to apply to the photo element.
+ * @param children - Optional React children to render in the modal footer.
+ * @param thumbnail - (Optional) The URL of a thumbnail image to display instead of the main photo.
+ */
+export const Photo: React.FC<PropsWithChildren<PhotoProps>> = ({ photo, title, photo_style, children, thumbnail }) => {
     const [modalOpen, setModalOpen] = useState(false);
 
     return <>
         <Link to="#" onClick={() => setModalOpen(true)}>
-            <img src={photo} className={photo_style} alt={title} />
+            <img src={thumbnail || photo} className={photo_style} alt={title} />
         </Link>
         <Modal
             dismissible
