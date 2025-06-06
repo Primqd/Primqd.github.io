@@ -21,6 +21,12 @@ import ChenF_MPC3_Quote_CS from "../../../assets/photo_portfolio/MPC/ChenF_MPC3_
 import ChenF_MPC3_Quote_Edit_05 from "../../../assets/photo_portfolio/MPC/ChenF_MPC3_Quote_Edit_05.jpg"
 import ChenF_MPC3_Quote_Edit_08 from "../../../assets/photo_portfolio/MPC/ChenF_MPC3_Quote_Edit_08.jpg"
 
+import ChenF_MPC4_Crystalline_CS from "../../../assets/photo_portfolio/MPC/ChenF_MPC4_Crystalline_CS.jpg"
+import ChenF_MPC4_Crystalline_Edit_04 from "../../../assets/photo_portfolio/MPC/ChenF_MPC4_Crystalline_Edit_04.jpg"
+import ChenF_MPC4_Crystalline_Edit_12 from "../../../assets/photo_portfolio/MPC/ChenF_MPC4_Crystalline_Edit_12.jpg"
+
+
+
 type MPCProps = {
     title: string;
     description: string;
@@ -144,6 +150,32 @@ export const PhotoProjects: React.FC = () => {
                 <MPCPhoto
                     photo={ChenF_MPC3_Quote_Edit_08}
                     title={`Edit 2: "Darkness cannot drive out darkness- only light can do that."`}
+                    description="Second edit of the project"
+                />
+            </MPC>
+            <MPC
+                title="MPC 4: Crystalline"
+                description={`
+                For my fourth Mini Photo Challenge, I decided to choose the theme "crystalline," capturing photos of crystals and other crystal-like things.
+                I decided to photograph several things, including a plastic crystal tree, a glass gem-like ball, a glass dice from a classmate, a crystal of amythest, and a rock of (I think) pyrite.
+                For the first edit, I used blue and green light to illuminate the tree, which, interestingly enough, turned into blue and yellow light by maximizing the tint slider to +150. I focused the details of the tree using low aperature with a macro lens.
+                For the second edit, I used a CD to refract rainbows along the amythest crystal, using a macro lens with high aperature to capture how the amythest reflected the light.
+                I also turned up the tint significantly to emphasize the purple color of the amythest throughout the majority of the photo.
+            `}
+            >
+                <MPCPhoto
+                    photo={ChenF_MPC4_Crystalline_CS}
+                    title="MPC4 Contact Sheet"
+                    description="Contact Sheet for the project"
+                />
+                <MPCPhoto
+                    photo={ChenF_MPC4_Crystalline_Edit_04}
+                    title={`Edit 1: Crystal Tree`}
+                    description="First edit of the project"
+                />
+                <MPCPhoto
+                    photo={ChenF_MPC4_Crystalline_Edit_12}
+                    title={`Edit 2: Amethyst Crystal`}
                     description="Second edit of the project"
                 />
             </MPC>
