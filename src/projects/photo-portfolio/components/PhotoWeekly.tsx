@@ -16,12 +16,22 @@ import WP_10 from "../../../assets/photo_portfolio/WP/ChenF_WP_10.jpg"
 import WP_11_12 from "../../../assets/photo_portfolio/WP/ChenF_WP_11_12.jpg"
 import WP_13 from "../../../assets/photo_portfolio/WP/ChenF_WP_13.jpg"
 
+import WP_1_Th from "../../../assets/photo_portfolio/WP/Thumbnails/ChenF_WP_01_Thumbnail.jpg"
+import WP_3_Th from "../../../assets/photo_portfolio/WP/Thumbnails/ChenF_WP_03_Thumbnail.jpg"
+import WP_5_Th from "../../../assets/photo_portfolio/WP/Thumbnails/ChenF_WP_05_Thumbnail.jpg"
+import WP_6_Th from "../../../assets/photo_portfolio/WP/Thumbnails/ChenF_WP_06_Thumbnail.jpg"
+import WP_7_Th from "../../../assets/photo_portfolio/WP/Thumbnails/ChenF_WP_07_Thumbnail.jpg"
+import WP_9_Th from "../../../assets/photo_portfolio/WP/Thumbnails/ChenF_WP_09_Thumbnail.jpg"
+import WP_10_Th from "../../../assets/photo_portfolio/WP/Thumbnails/ChenF_WP_10_Thumbnail.jpg"
+import WP_11_12_Th from "../../../assets/photo_portfolio/WP/Thumbnails/ChenF_WP_11_12_Thumbnail.jpg"
+import WP_13_Th from "../../../assets/photo_portfolio/WP/Thumbnails/ChenF_WP_13_Thumbnail.jpg"
+
 type WeeklyPhotoProps = {
     photo: string,
     title: string,
 }
 
-// TODO: add lower quality thumbnail so it stops lagging like shit
+// alternative speration: w-[22.5vw], gap-8
 const WeeklyPhoto: React.FC<PropsWithChildren<WeeklyPhotoProps>> = ({ photo, title, children }) => {
     return (
         <div className={"w-[24.775vw] h-[25vh] relative"}>
