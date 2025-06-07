@@ -34,7 +34,7 @@ export const Photo: React.FC<PropsWithChildren<PhotoProps>> = ({ photo, title, p
             dismissible
             show={modalOpen}
             onClose={() => setModalOpen(false)}>
-            <ModalHeader className="bg-neutral-800 text-white">
+            <ModalHeader className="dark:bg-neutral-800 dark:text-white">
                 {title}
             </ModalHeader>
             <ModalBody>
@@ -44,7 +44,7 @@ export const Photo: React.FC<PropsWithChildren<PhotoProps>> = ({ photo, title, p
                     </a>
                 </figure>
             </ModalBody>
-            <ModalFooter className="text-white">
+            <ModalFooter className="text-black dark:text-white">
                 {children}
             </ModalFooter>
 
