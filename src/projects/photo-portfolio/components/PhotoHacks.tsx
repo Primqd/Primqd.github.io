@@ -37,7 +37,20 @@ export const PhotoHacks: React.FC = ({ }) => {
         <div className="max-w-screen flex flex-col justify-center items-center">
             <h2 className="pt-4 font-semibold text-5xl whitespace-nowrap text-center">Photo Hacks</h2>
             <div className="w-[80vw] h-[80vh] pt-4">
-                <Carousel pauseOnHover slideInterval={30000}>
+                <Carousel pauseOnHover slideInterval={30000} theme={
+                    {
+                        "indicators": {
+                            "active": {
+                                "off": "bg-gray-800/50 hover:bg-gray-800",
+                                "on": "bg-gray-800"
+                            }
+                        },
+                        "control": {
+                            "base": "inline-flex h-8 w-8 items-center justify-center rounded-fullgroup-focus:outline-none group-focus:ring-4  sm:h-10 sm:w-10 bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70",
+                            "icon": "h-5 w-5 sm:h-6 sm:w-6 text-gray-800"
+                        }
+                    }
+                }>
                     <HackPhoto
                         photo={ChenF_Hacks_Pinhole}
                         title="Pinhole Camera"

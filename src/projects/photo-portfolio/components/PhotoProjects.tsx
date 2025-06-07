@@ -25,8 +25,6 @@ import ChenF_MPC4_Crystalline_CS from "../../../assets/photo_portfolio/MPC/ChenF
 import ChenF_MPC4_Crystalline_Edit_04 from "../../../assets/photo_portfolio/MPC/ChenF_MPC4_Crystalline_Edit_04.jpg"
 import ChenF_MPC4_Crystalline_Edit_12 from "../../../assets/photo_portfolio/MPC/ChenF_MPC4_Crystalline_Edit_12.jpg"
 
-
-
 type MPCProps = {
     title: string;
     description: string;
@@ -63,7 +61,20 @@ const MPC: React.FC<PropsWithChildren<MPCProps>> = ({ title, description, childr
                 <h3 className="pt-2 text-xl/8">{description}</h3>
             </div>
             <div className="w-[60%]">
-                <Carousel pauseOnHover slideInterval={30000}>
+                <Carousel pauseOnHover slideInterval={30000} theme={
+                    {
+                        "indicators": {
+                            "active": {
+                                "off": "bg-gray-800/50 hover:bg-gray-800",
+                                "on": "bg-gray-800"
+                            }
+                        },
+                        "control": {
+                            "base": "inline-flex h-8 w-8 items-center justify-center rounded-fullgroup-focus:outline-none group-focus:ring-4  sm:h-10 sm:w-10 bg-gray-800/30 group-hover:bg-gray-800/60 group-focus:ring-gray-800/70",
+                            "icon": "h-5 w-5 sm:h-6 sm:w-6 text-gray-800"
+                        }
+                    }
+                }>
                     {children}
                 </Carousel>
             </div>
