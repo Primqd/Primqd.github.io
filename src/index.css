@@ -3,13 +3,23 @@
 @source "../.flowbite-react/class-list.json";
 
 @theme {
-    --color-primary: #262626;
-    --color-secondary: #404040;
-    --color-button-hover: #525252;
-    --color-button-click: #a3a3a3;
-    --color-text-default: #a3a3a3;
-    --color-text-highlight: #ffffff;
-    --color-text-dark: #737373;
-    --color-text-url: #06b6d4;
-    --color-border-bright: #525252;
+    --color-primary: #ffffff;
+    --color-secondary: #e5e5e5;
+    --color-button-hover: #a3a3a3;
+    --color-button-click: #737373;
+    --color-text-default: #737373;
+    --color-text-highlight: #000000;
+    --color-text-dark: #e5e5e5;
+    --color-text-url: #3b82f6;
+    --color-border-bright: #a3a3a3;
+    
+    --color-dark-primary: #262626;
+    --color-dark-secondary: #404040;
+    --color-dark-button-hover: #525252;
+    --color-dark-button-click: #a3a3a3;
+    --color-dark-text-default: #a3a3a3;
+    --color-dark-text-highlight: #ffffff;
+    --color-dark-text-dark: #737373;
+    --color-dark-text-url: #06b6d4;
+    --color-dark-border-bright: #525252;
 }
