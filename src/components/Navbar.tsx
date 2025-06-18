@@ -6,11 +6,11 @@ import "../index.css";
 <p className="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500">The quick brown fox...</p> */}
 
 const liStyle = "w-1/4";
-const buttonStyle = "z-1 h-full w-full text-[1.2rem] text-white transition duration-300 hover:bg-neutral-600 active:bg-neutral-400"; //border-b-4 border-neutral-800
+const buttonStyle = "z-1 h-full w-full text-[1.2rem] text-white transition duration-300 hover:bg-button-hover active:bg-button-click"; //border-b-4 border-neutral-800
 
 export const Navbar: React.FC = () => {
     return (
-        <nav className="bg-primary-700 z-50 h-[5rem] w-[100%] fixed top-0">
+        <nav className="bg-secondary z-50 h-[5rem] w-[100%] fixed top-0">
             <div className="h-1/2 w-full overflow-hidden relative flex"> {/* top header stuff*/}
                 <img className="absolute h-full w-full object-none z-0" src={navbarArt} alt="generic navbar art" />
                 <div className="flex w-full items-center justify-center">
