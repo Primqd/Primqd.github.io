@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import debugNavbarArt from "../assets/debug_navbar_art.png"
+import navbarArt from "../assets/amethyst-navbar.jpg";
 import "../index.css";
 
 {/* <p className="text-blue-600/100 dark:text-sky-400/100 bg-neutral-800 p-2">The quick brown fox...</p>
@@ -12,9 +12,9 @@ export const Navbar: React.FC = () => {
     return (
         <nav className="bg-neutral-700 z-50 h-[5rem] w-[100%] fixed top-0">
             <div className="h-1/2 w-full overflow-hidden relative flex"> {/* top header stuff*/}
-                <img className="absolute h-full w-full object-none z-0" src={debugNavbarArt} alt="generic navbar art" />
+                <img className="absolute h-full w-full object-none z-0" src={navbarArt} alt="generic navbar art" />
                 <div className="flex w-full items-center justify-center">
-                    <Link to="/" className="absolute h-full text-[2rem] flex items-center justify-center z-1 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-white to-blue-700 font-bold">Franklin Chen</Link>
+                    <Link to="/" className="absolute h-full text-[2rem] flex items-center justify-center z-1 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-white to-purple-500 font-bold">Franklin Chen</Link>
                 </div>
             </div>
             <div className="h-1/2 w-full flex">
