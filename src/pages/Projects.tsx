@@ -3,7 +3,7 @@ import photo_portfolio_thumbnail from "../assets/photo_portfolio_thumbnail.png";
 import { Project } from "../components/Project";
 
 export const Projects: React.FC = () => {
-    return <div className="bg-neutral-800 text-white pt-[5rem] pb-[4rem] min-h-screen max-w-screen items-center flex flex-col">
+    return <div className="bg-primary text-white pt-[5rem] pb-[4rem] min-h-screen max-w-screen items-center flex flex-col">
         <Project
             title="Photo Portfolio"
             description={`
