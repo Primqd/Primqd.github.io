@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import pig from "../assets/pig.png"
 
-const internalLinkStyle = "font-semibold text-white hover:underline" // links to subpages
+const internalLinkStyle = "font-semibold text-text-highlight hover:underline" // links to subpages
 
 export const Home: React.FC = () => {
-    return <div className="bg-primary text-white pt-[5rem] min-h-screen">
+    return <div className="bg-primary text-text-highlight pt-[5rem] min-h-screen">
         <div className="flex justify-center items-center gap-[35%] px-[5rem] pt-[8rem]">
             <div className="yap align-middle">
                 <h1 className="text-5xl font-semibold pb-[0.75rem]">Hi!</h1>

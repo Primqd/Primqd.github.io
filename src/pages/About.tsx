@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-const externalLinkStyle = "text-cyan-500 hover:underline"; // links to other websites
-const internalLinkStyle = "font-semibold text-white hover:underline" // links to subpages
+const externalLinkStyle = "text-text-url hover:underline"; // links to other websites
+const internalLinkStyle = "font-semibold text-text-highlight hover:underline" // links to subpages
 
 export const About: React.FC = () => {
-    return <div className="bg-primary text-white pt-[5rem] min-h-screen">
+    return <div className="bg-primary text-text-highlight pt-[5rem] min-h-screen">
         <div className="flex px-[min(5rem,10%)] pt-[min(4rem,10%)]">
             <div className="yap align-middle">
                 <div className="pb-[3rem] About me">
@@ -14,11 +14,11 @@ export const About: React.FC = () => {
                     <p className="max-w-3xl text-lg text-text-default">
                         I'm Franklin, an aspiring computer science student currently in sophmore year of high school.
                         I enjoy
-                        <span className="text-white font-semibold"> web development</span> and
-                        <span className="text-white font-semibold"> competitive programming</span>,
+                        <span className="text-text-highlight font-semibold"> web development</span> and
+                        <span className="text-text-highlight font-semibold"> competitive programming</span>,
                         but I'm still learning about different fields of CS I enjoy.
-                        On the side, I enjoy <span className="text-white font-semibold">photography </span>
-                        and <span className="text-white font-semibold">gaming</span>.
+                        On the side, I enjoy <span className="text-text-highlight font-semibold">photography </span>
+                        and <span className="text-text-highlight font-semibold">gaming</span>.
                     </p>
                 </div>
                 <div className="pb-[3rem] Skills">
@@ -219,7 +219,7 @@ export const About: React.FC = () => {
                     </h1>
                     <ul className="pl-[1.2rem] list-decimal max-w-3xl text-lg text-gray-400">
                         <li>
-                            Discord Username: <span className="text-white font-semibold">Primqd</span>
+                            Discord Username: <span className="text-text-highlight font-semibold">Primqd</span>
                             <ul className="pl-[2.4rem] list-[disc]"><li>Best way to contact me. Message me first before friending please- I usually don't accept random friend requests.</li></ul>
                         </li>
                         <li>
