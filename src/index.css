@@ -7,5 +7,6 @@
     --color-secondary: #404040;
     --color-button-hover: #525252;
     --color-button-click: #a3a3a3;
-    --color-text-default: #9ca3af;
+    --color-text-default: #a3a3a3;
+    --color-text-highlight: #ffffff;
 }

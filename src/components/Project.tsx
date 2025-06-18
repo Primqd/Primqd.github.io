@@ -22,7 +22,7 @@ export const Project: React.FC<ProjectProps> = ({ title, description, image, lin
                 </div>
                 <Link to={link}>
                     <figure className="max-w px-[2rem] py-[2rem]">
-                        <img className="max-w-[25rem] border-4 border-gray-400" alt="clay pig" src={image}></img>
+                        <img className="max-w-[25rem] border-4 border-neutral-500" alt="clay pig" src={image}></img>
                     </figure>
                 </Link>
             </div>

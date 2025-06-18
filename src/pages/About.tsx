@@ -4,14 +4,14 @@ const externalLinkStyle = "text-cyan-500 hover:underline"; // links to other web
 const internalLinkStyle = "font-semibold text-white hover:underline" // links to subpages
 
 export const About: React.FC = () => {
-    return <div className="bg-neutral-800 text-white pt-[5rem] min-h-screen">
+    return <div className="bg-primary text-white pt-[5rem] min-h-screen">
         <div className="flex px-[min(5rem,10%)] pt-[min(4rem,10%)]">
             <div className="yap align-middle">
                 <div className="pb-[3rem] About me">
                     <h1 className="text-5xl font-semibold pb-[1rem]">
                         About me
                     </h1>
-                    <p className="max-w-3xl text-lg text-gray-400">
+                    <p className="max-w-3xl text-lg text-text-default">
                         I'm Franklin, an aspiring computer science student currently in sophmore year of high school.
                         I enjoy
                         <span className="text-white font-semibold"> web development</span> and
@@ -25,7 +25,7 @@ export const About: React.FC = () => {
                     <h1 className="text-4xl font-semibold pb-[0.5rem]">
                         Skills
                     </h1>
-                    <ul className="pl-[1.2rem] list-disc max-w-3xl text-lg text-gray-400">
+                    <ul className="pl-[1.2rem] list-disc max-w-3xl text-lg text-text-default">
                         <li className="Programming Languages">
                             Programming Languages
                             <ul className="pl-[2.4rem] list-[upper-roman]">

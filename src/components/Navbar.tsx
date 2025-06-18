@@ -6,7 +6,7 @@ import "../index.css";
 <p className="bg-gradient-to-r from-blue-500 via-teal-500 to-green-500">The quick brown fox...</p> */}
 
 const liStyle = "w-1/4";
-const buttonStyle = "z-1 h-full w-full text-[1.2rem] text-white transition duration-300 hover:bg-button-hover active:bg-button-click"; //border-b-4 border-neutral-800
+const buttonStyle = "z-1 h-full w-full text-[1.2rem] text-text-highlight transition duration-300 hover:bg-button-hover active:bg-button-click"; //border-b-4 border-neutral-800
 
 export const Navbar: React.FC = () => {
     return (
