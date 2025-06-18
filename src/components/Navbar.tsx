@@ -10,7 +10,7 @@ const buttonStyle = "z-1 h-full w-full text-[1.2rem] text-white transition durat
 
 export const Navbar: React.FC = () => {
     return (
-        <nav className="bg-secondary z-50 h-[5rem] w-[100%] fixed top-0">
+        <nav className="bg-primary-700 z-50 h-[5rem] w-[100%] fixed top-0">
             <div className="h-1/2 w-full overflow-hidden relative flex"> {/* top header stuff*/}
                 <img className="absolute h-full w-full object-none z-0" src={navbarArt} alt="generic navbar art" />
                 <div className="flex w-full items-center justify-center">

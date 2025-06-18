@@ -3,6 +3,14 @@
 @source "../.flowbite-react/class-list.json";
 
 @theme {
-  --color-primary: #262626,
-  --color-secondary: #404040,
+    --color-primary-50: #fafaf9;
+    --color-primary-100: #f5f5f4;
+    --color-primary-200: #e7e5e4;
+    --color-primary-300: #d6d3d1;
+    --color-primary-400: #a8a29e;
+    --color-primary-500: #78716c;
+    --color-primary-600: #57534e;
+    --color-primary-700: #44403c;
+    --color-primary-800: #292524;
+    --color-primary-900: #1c1917;
 }
