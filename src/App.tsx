@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './index.css'
 
-import { Navbar } from './components/Navbar';
+import { WebsiteNavbar } from './components/Navbar';
 
 import { Home } from './pages/Home';
 import { Games } from './pages/Games';
@@ -15,7 +15,7 @@ const HideNavbarPages = [ // pages to hide navbar
 
 function AppWrapper() { // wrapper for app component to use useLocation
   return <>
-    {!HideNavbarPages.includes(useLocation().pathname) && <Navbar />} {/*Hides the navbar if the current path is part of HideNavbarPages*/}
+    {!HideNavbarPages.includes(useLocation().pathname) && <WebsiteNavbar />} {/*Hides the navbar if the current path is part of HideNavbarPages*/}
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/games' element={<Games />} />

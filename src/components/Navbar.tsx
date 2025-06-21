@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Navbar } from "flowbite-react";
 import navbarArt from "../assets/amethyst-navbar.jpg";
 import "../index.css";
 
@@ -6,9 +7,9 @@ const liStyle = "w-1/4";
 const buttonStyle =
     "z-1 h-full w-full text-[1.2rem] text-text-highlight dark:text-dark-text-highlight transition duration-300 hover:bg-button-hover dark:hover:bg-dark-button-hover active:bg-button-click dark:active:bg-dark-button-click";
 
-export const Navbar: React.FC = () => {
+export const WebsiteNavbar: React.FC = () => {
     return (
-        <nav className="bg-secondary dark:bg-dark-secondary z-50 h-[5rem] w-[100%] fixed top-0">
+        <Navbar className="bg-secondary dark:bg-dark-secondary z-50 h-[5rem] w-[100%] fixed top-0">
             <div className="h-1/2 w-full overflow-hidden relative flex">
                 {/* top header stuff*/}
                 <img
@@ -49,7 +50,7 @@ export const Navbar: React.FC = () => {
                     </li>
                 </ul>
             </div>
-        </nav>
+        </Navbar>
     )
 }
 
