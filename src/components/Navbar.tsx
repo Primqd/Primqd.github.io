@@ -1,47 +1,61 @@
 import { Link, useLocation } from "react-router-dom";
-import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
+import { createTheme, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle, ThemeProvider } from "flowbite-react";
 import "../index.css";
 
-const liStyle = "w-1/4";
-const buttonStyle = "z-1 h-full w-full text-[1.2rem] text-text-highlight dark:text-dark-text-highlight transition duration-300 hover:bg-button-hover dark:hover:bg-dark-button-hover active:bg-button-click dark:active:bg-dark-button-click";
+const NavbarTheme = createTheme({
+    navbar: {
+        brand: {
+            base: "p-2"
+        },
+        link: {
+            base: "block text-base font-normal p-2 md:pr-4 bg-secondary dark:bg-dark-secondary",
+            active: {
+                on: "text-text-highlight md:text-text-highlight dark:text-dark-text-highlight",
+                off: "text-text-default md:text-text-default hover:text-button-hover md:hover:text-button-hover dark:text-dark-text-default"
+            }
+        }
+    }
+})
 
 // TODO: apply custom style to navbar links
 export const WebsiteNavbar: React.FC = () => {
     const location = useLocation();
 
     return (
-        <Navbar fluid rounded className="bg-secondary dark:bg-dark-secondary z-50 w-[100%] fixed top-0">
-            <NavbarBrand>
-                <Link
-                    to='/'
-                    className="self-center whitespace-nowrap text-xl font-semibold text-text-highlight dark:text-dark-text-highlight">
-                    franklinvc.com
-                </Link>
-            </NavbarBrand>
-            <NavbarToggle />
-            <NavbarCollapse>
-                <Link to="/">
-                    <NavbarLink active={location.pathname === '/'} as='div'>
-                        Home
-                    </NavbarLink>
-                </Link>
-                <Link to="/games">
-                    <NavbarLink active={location.pathname === '/games'} as='div'>
-                        Games
-                    </NavbarLink>
-                </Link>
-                <Link to="/projects">
-                    <NavbarLink active={location.pathname === '/projects'} as='div'>
-                        Projects
-                    </NavbarLink>
-                </Link>
-                <Link to="/about">
-                    <NavbarLink active={location.pathname === '/about'} as='div'>
-                        About
-                    </NavbarLink>
-                </Link>
-            </NavbarCollapse>
-        </Navbar>
+        <ThemeProvider theme={NavbarTheme}>
+            <Navbar fluid rounded className="bg-secondary dark:bg-dark-secondary z-50 min-w-screen fixed top-0">
+                <NavbarBrand>
+                    <Link
+                        to='/'
+                        className="self-center whitespace-nowrap text-xl font-semibold text-text-highlight dark:text-dark-text-highlight">
+                        franklinvc.com
+                    </Link>
+                </NavbarBrand>
+                <NavbarToggle />
+                <NavbarCollapse>
+                    <Link to="/">
+                        <NavbarLink active={location.pathname === '/'} as='div'>
+                            Home
+                        </NavbarLink>
+                    </Link>
+                    <Link to="/games">
+                        <NavbarLink active={location.pathname === '/games'} as='div'>
+                            Games
+                        </NavbarLink>
+                    </Link>
+                    <Link to="/projects">
+                        <NavbarLink active={location.pathname === '/projects'} as='div'>
+                            Projects
+                        </NavbarLink>
+                    </Link>
+                    <Link to="/about">
+                        <NavbarLink active={location.pathname === '/about'} as='div'>
+                            About
+                        </NavbarLink>
+                    </Link>
+                </NavbarCollapse>
+            </Navbar>
+        </ThemeProvider>
     )
 }
 
