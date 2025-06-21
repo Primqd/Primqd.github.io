@@ -1,4 +1,4 @@
-import { Link, useLinkClickHandler } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
 import "../index.css";
 
@@ -8,39 +8,41 @@ const buttonStyle =
 
 export const WebsiteNavbar: React.FC = () => {
     return (
-        <Navbar fluid rounded className="bg-secondary dark:bg-dark-secondary z-50 h-[5rem] w-[100%] fixed top-0">
+        <Navbar fluid rounded className="bg-secondary dark:bg-dark-secondary z-50 w-[100%] fixed top-0">
             <NavbarBrand>
                 <Link
                     to='/'
                     className="self-center whitespace-nowrap text-xl font-semibold text-text-highlight dark:text-dark-text-highlight">
-
                     franklinvc.com
                 </Link>
             </NavbarBrand>
-            <div className="h-1/2 w-full flex">
-                <ul className="h-full w-full flex">
-                    <li className={liStyle}>
-                        <Link to="/">
-                            <input className={buttonStyle} type="button" value="Home" />
-                        </Link>
-                    </li>
-                    <li className={liStyle}>
-                        <Link to="/games">
-                            <input className={buttonStyle} type="button" value="Games" />
-                        </Link>
-                    </li>
-                    <li className={liStyle}>
-                        <Link to="/projects">
-                            <input className={buttonStyle} type="button" value="Projects" />
-                        </Link>
-                    </li>
-                    <li className={liStyle}>
-                        <Link to="/about">
-                            <input className={buttonStyle} type="button" value="About" />
-                        </Link>
-                    </li>
-                </ul>
-            </div>
+            <NavbarToggle />
+            <NavbarCollapse>
+                <div className="h-1/2 w-full flex">
+                    <ul className="h-full w-full flex">
+                        <li className={liStyle}>
+                            <Link to="/">
+                                <input className={buttonStyle} type="button" value="Home" />
+                            </Link>
+                        </li>
+                        <li className={liStyle}>
+                            <Link to="/games">
+                                <input className={buttonStyle} type="button" value="Games" />
+                            </Link>
+                        </li>
+                        <li className={liStyle}>
+                            <Link to="/projects">
+                                <input className={buttonStyle} type="button" value="Projects" />
+                            </Link>
+                        </li>
+                        <li className={liStyle}>
+                            <Link to="/about">
+                                <input className={buttonStyle} type="button" value="About" />
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </NavbarCollapse>
         </Navbar>
     )
 }
