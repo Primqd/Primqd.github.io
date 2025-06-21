@@ -5,8 +5,7 @@
 @theme {
     --color-primary: #ffffff;
     --color-secondary: #e5e5e5;
-    --color-button-hover: #a3a3a3;
-    --color-button-click: #737373;
+    --color-button-hover: #4a4a4a;
     --color-text-default: #737373;
     --color-text-highlight: #000000;
     --color-text-dark: #e5e5e5;
@@ -15,8 +14,7 @@
     
     --color-dark-primary: #262626;
     --color-dark-secondary: #404040;
-    --color-dark-button-hover: #525252;
-    --color-dark-button-click: #a3a3a3;
+    --color-dark-button-hover: #d4d4d4;
     --color-dark-text-default: #a3a3a3;
     --color-dark-text-highlight: #ffffff;
     --color-dark-text-dark: #737373;
