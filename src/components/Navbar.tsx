@@ -8,9 +8,9 @@ const NavbarTheme = createTheme({
             base: "p-2"
         },
         link: {
-            base: "block text-base font-normal p-2 md:pr-4 bg-secondary dark:bg-dark-secondary",
+            base: "block text-base font-normal p-2 md:pr-4 bg-secondary md:bg-secondary dark:md:bg-dark-secondary dark:bg-dark-secondary",
             active: {
-                on: "text-text-highlight md:text-text-highlight dark:text-dark-text-highlight",
+                on: "text-text-highlight md:text-text-highlight bg-secondary dark:text-dark-text-highlight",
                 off: "text-text-default md:text-text-default hover:text-button-hover md:hover:text-button-hover dark:hover:text-dark-button-hover md:dark:hover:text-dark-button-hover dark:text-dark-text-default"
             }
         }
