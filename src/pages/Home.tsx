@@ -5,10 +5,10 @@ const internalLinkStyle = "font-semibold text-text-highlight dark:text-dark-text
 
 export const Home: React.FC = () => {
     return <div className="bg-primary text-text-highlight dark:bg-dark-primary dark:text-dark-text-highlight pt-[5rem] min-h-screen">
-        <div className="flex justify-center items-center gap-[35%] px-[5rem] pt-[8rem]">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-[10vh] lg:gap-[25%] px-[5rem] pt-[8rem]">
             <div className="yap align-middle">
                 <h1 className="text-5xl font-semibold pb-[0.75rem]">Hi!</h1>
-                <p className="max-w-lg text-lg text-text-default dark:text-dark-text-default">
+                <p className="max-w-lg text-lg text-text-default dark:text-dark-text-default pb-[0.75rem]">
                     This is my personal website, where I do all sorts of shenanigans.
                     Check out the <Link className={internalLinkStyle} to="/projects">projects</Link> and <Link className={internalLinkStyle} to="/games">games</Link> pages to see more.
                     Or, if you'd like to learn more about me, check out my <Link className={internalLinkStyle} to="/about">about</Link> page!
