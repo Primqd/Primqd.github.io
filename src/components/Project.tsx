@@ -10,7 +10,7 @@ type ProjectProps = {
 export const Project: React.FC<ProjectProps> = ({ title, description, image, link }) => {
     return (
         <div className="w-[95%] px-[2.5%] h-[50%] pt-[2.5%]">
-            <div className="flex border-4 border-border-bright dark:border-dark-border-bright bg-secondary dark:bg-dark-secondary align-middle">
+            <div className="flex flex-col lg:flex-row border-4 border-border-bright dark:border-dark-border-bright bg-secondary dark:bg-dark-secondary align-middle">
                 <div className="px-[2rem] py-[2rem] w-[100%]">
                     <Link
                         to={link}
@@ -23,9 +23,9 @@ export const Project: React.FC<ProjectProps> = ({ title, description, image, lin
                     </p>
                 </div>
                 <Link to={link}>
-                    <figure className="max-w px-[2rem] py-[2rem]">
+                    <figure className="px-[2rem] py-[2rem]">
                         <img
-                            className="max-w-[25rem] border-4 border-border-bright dark:border-dark-border-bright"
+                            className="min-w-1 border-4 border-border-bright dark:border-dark-border-bright"
                             alt="clay pig"
                             src={image}
                         />
