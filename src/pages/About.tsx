@@ -4,14 +4,14 @@ const externalLinkStyle = "text-text-url dark:text-dark-text-url hover:underline
 const internalLinkStyle = "font-semibold text-text-highlight dark:text-dark-text-highlight hover:underline" // links to subpages
 
 export const About: React.FC = () => {
-    return <div className="bg-primary dark:bg-dark-primary text-text-highlight dark:text-dark-text-highlight pt-[5rem] px-[2rem] min-h-screen">
+    return <div className="bg-primary dark:bg-dark-primary text-text-highlight dark:text-dark-text-highlight pt-[5rem] px-[2rem] min-w-screen min-h-screen">
         <div className="flex break-all lg:break-keep">
             <div className="yap align-middle">
                 <div className="pb-[3rem] About me">
                     <h1 className="text-5xl font-semibold pb-[1rem]">
                         About me
                     </h1>
-                    <p className="max-w-3xl text-lg text-text-default dark:text-dark-text-default">
+                    <p className=" text-lg text-text-default dark:text-dark-text-default">
                         I'm Franklin, an aspiring computer science student currently in sophmore year of high school.
                         I enjoy
                         <span className="text-text-highlight dark:text-dark-text-highlight font-semibold"> web development</span> and
@@ -25,7 +25,7 @@ export const About: React.FC = () => {
                     <h1 className="text-4xl font-semibold pb-[0.5rem]">
                         Skills
                     </h1>
-                    <ul className="pl-[min(1.2rem,10%)] list-disc max-w-3xl text-lg text-text-default dark:text-dark-text-default">
+                    <ul className="pl-[min(1.2rem,10%)] list-disc  text-lg text-text-default dark:text-dark-text-default">
                         <li className="Programming Languages">
                             Programming Languages
                             <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
@@ -161,7 +161,7 @@ export const About: React.FC = () => {
                     <h1 className="text-4xl font-semibold pb-[0.5rem]">
                         Hobbies
                     </h1>
-                    <ul className="pl-[min(1.2rem,10%)] list-disc max-w-3xl text-lg text-gray-400 dark:text-dark-gray-400">
+                    <ul className="pl-[min(1.2rem,10%)] list-disc  text-lg text-gray-400 dark:text-dark-gray-400">
                         <li className="Photography">
                             Photography
                             <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
@@ -217,7 +217,7 @@ export const About: React.FC = () => {
                     <h1 className="text-4xl font-semibold pb-[0.5rem]">
                         Contacts
                     </h1>
-                    <ul className="pl-[min(1.2rem,10%)] list-decimal max-w-3xl text-lg text-gray-400 dark:text-dark-gray-400">
+                    <ul className="pl-[min(1.2rem,10%)] list-decimal  text-lg text-gray-400 dark:text-dark-gray-400">
                         <li>
                             Discord Username: <span className="text-text-highlight dark:text-dark-text-highlight font-semibold">Primqd</span>
                             <ul className="pl-[min(2.4rem,10%)] list-[disc]"><li>Best way to contact me. Message me first before friending please- I usually don't accept random friend requests.</li></ul>
