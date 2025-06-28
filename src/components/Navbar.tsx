@@ -24,7 +24,7 @@ export const WebsiteNavbar: React.FC = () => {
     return (
         <ThemeProvider theme={NavbarTheme}>
             <Navbar fluid rounded className="bg-secondary dark:bg-dark-secondary z-50 min-w-screen fixed top-0">
-                <NavbarBrand>
+                <NavbarBrand as="div">
                     <Link
                         to='/'
                         className="self-center whitespace-nowrap text-xl font-semibold text-text-highlight dark:text-dark-text-highlight">
