@@ -1,6 +1,7 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLinkClickHandler, useLocation } from "react-router-dom";
 import { createTheme, Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle, ThemeProvider } from "flowbite-react";
 import "../index.css";
+import { PropsWithChildren } from "react";
 
 const NavbarTheme = createTheme({
     navbar: {
@@ -17,42 +18,40 @@ const NavbarTheme = createTheme({
     }
 })
 
+// custom component for reactnavlink to preserve react router property
+type ReactNavLinkProps = {
+    to: string;
+    className?: string
+}
+
+const ReactNavLink: React.FC<PropsWithChildren<ReactNavLinkProps>> = ({ to, className, children }) => {
+    const clickHandler = useLinkClickHandler(to);
+    const location = useLocation();
+
+    return <NavbarLink href={to} active={location.pathname == to}>
+        <span className={className} onClick={clickHandler}>
+            {children}
+        </span>
+    </NavbarLink>
+};
+
 // TODO: apply custom style to navbar links
 export const WebsiteNavbar: React.FC = () => {
-    const location = useLocation();
 
     return (
         <ThemeProvider theme={NavbarTheme}>
             <Navbar fluid rounded className="bg-secondary dark:bg-dark-secondary z-50 min-w-screen fixed top-0">
                 <NavbarBrand>
-                    <Link
-                        to='/'
-                        className="self-center whitespace-nowrap text-xl font-semibold text-text-highlight dark:text-dark-text-highlight">
+                    <ReactNavLink className={"self-center whitespace-nowrap text-xl font-semibold text-text-highlight dark:text-dark-text-highlight"} to="/">
                         franklinvc.com
-                    </Link>
+                    </ReactNavLink>
                 </NavbarBrand>
                 <NavbarToggle />
                 <NavbarCollapse>
-                    <Link to="/">
-                        <NavbarLink active={location.pathname === '/'} as='div'>
-                            Home
-                        </NavbarLink>
-                    </Link>
-                    <Link to="/games">
-                        <NavbarLink active={location.pathname === '/games'} as='div'>
-                            Games
-                        </NavbarLink>
-                    </Link>
-                    <Link to="/projects">
-                        <NavbarLink active={location.pathname === '/projects'} as='div'>
-                            Projects
-                        </NavbarLink>
-                    </Link>
-                    <Link to="/about">
-                        <NavbarLink active={location.pathname === '/about'} as='div'>
-                            About
-                        </NavbarLink>
-                    </Link>
+                    <ReactNavLink to="/">Home</ReactNavLink>
+                    <ReactNavLink to="/games">Games</ReactNavLink>
+                    <ReactNavLink to="/projects">Projects</ReactNavLink>
+                    <ReactNavLink to="/about">About</ReactNavLink>
                 </NavbarCollapse>
             </Navbar>
         </ThemeProvider>
