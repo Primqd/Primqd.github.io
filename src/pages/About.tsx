@@ -4,8 +4,8 @@ const externalLinkStyle = "text-text-url dark:text-dark-text-url hover:underline
 const internalLinkStyle = "font-semibold text-text-highlight dark:text-dark-text-highlight hover:underline" // links to subpages
 
 export const About: React.FC = () => {
-    return <div className="bg-primary dark:bg-dark-primary text-text-highlight dark:text-dark-text-highlight pt-[5rem] min-h-screen">
-        <div className="flex px-[min(5rem,10%)] pt-[min(4rem,10%)]">
+    return <div className="bg-primary dark:bg-dark-primary text-text-highlight dark:text-dark-text-highlight pt-[5rem] px-[2rem] min-h-screen">
+        <div className="flex break-all lg:break-keep">
             <div className="yap align-middle">
                 <div className="pb-[3rem] About me">
                     <h1 className="text-5xl font-semibold pb-[1rem]">
@@ -25,10 +25,10 @@ export const About: React.FC = () => {
                     <h1 className="text-4xl font-semibold pb-[0.5rem]">
                         Skills
                     </h1>
-                    <ul className="pl-[1.2rem] list-disc max-w-3xl text-lg text-text-default dark:text-dark-text-default">
+                    <ul className="pl-[min(1.2rem,10%)] list-disc max-w-3xl text-lg text-text-default dark:text-dark-text-default">
                         <li className="Programming Languages">
                             Programming Languages
-                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
                                 <li>
                                     Python, self taught using <Link
                                         className={externalLinkStyle}
@@ -74,7 +74,7 @@ export const About: React.FC = () => {
                         </li>
                         <li className="Competitive Programming">
                             Competitive Programming
-                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
                                 <li>USACO Silver currently</li>
                                 <li>See my LeetCode profile <Link
                                     className={externalLinkStyle}
@@ -87,7 +87,7 @@ export const About: React.FC = () => {
                         </li>
                         <li className="Libraries">
                             Libraries
-                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
                                 <li>
                                     React, self taught using <Link
                                         className={externalLinkStyle}
@@ -104,7 +104,7 @@ export const About: React.FC = () => {
                         </li>
                         <li className="Education">
                             Education
-                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
                                 <li>
                                     Basic Data Structures and Algorithms, informally taught by <Link
                                         className={externalLinkStyle}
@@ -138,7 +138,7 @@ export const About: React.FC = () => {
                         </li>
                         <li className="Other Skills">
                             Other Skills
-                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
                                 <li>Git, taught by <Link
                                     className={externalLinkStyle}
                                     target="_blank"
@@ -161,10 +161,10 @@ export const About: React.FC = () => {
                     <h1 className="text-4xl font-semibold pb-[0.5rem]">
                         Hobbies
                     </h1>
-                    <ul className="pl-[1.2rem] list-disc max-w-3xl text-lg text-gray-400 dark:text-dark-gray-400">
+                    <ul className="pl-[min(1.2rem,10%)] list-disc max-w-3xl text-lg text-gray-400 dark:text-dark-gray-400">
                         <li className="Photography">
                             Photography
-                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
                                 <li>I've been taking photos on and off for the last 3 years or so!</li>
                                 <li>I take all kinds of photos, but I especially like nature photography</li>
                                 <li>I use a <Link
@@ -182,7 +182,7 @@ export const About: React.FC = () => {
                         </li>
                         <li className="Geometry Dash">
                             Geometry Dash
-                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
                                 <li>My hardest is currently <Link
                                     className={externalLinkStyle}
                                     target="_blank"
@@ -199,7 +199,7 @@ export const About: React.FC = () => {
                         </li>
                         <li className="Minecraft">
                             Minecraft
-                            <ul className="pl-[2.4rem] list-[upper-roman]">
+                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
                                 <li>My username is Primqd!</li>
                                 <li>I used to play Hypixel Skyblock, although I've moved onto modded Minecraft currently.</li>
                                 <li>I enjoy TerraFirmaCraft and GregTech... pray for my playtime ;-;</li>
@@ -213,18 +213,18 @@ export const About: React.FC = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="pb-[3rem] Contacts">
+                <div className="pb-[3rem]">
                     <h1 className="text-4xl font-semibold pb-[0.5rem]">
                         Contacts
                     </h1>
-                    <ul className="pl-[1.2rem] list-decimal max-w-3xl text-lg text-gray-400 dark:text-dark-gray-400">
+                    <ul className="pl-[min(1.2rem,10%)] list-decimal max-w-3xl text-lg text-gray-400 dark:text-dark-gray-400">
                         <li>
                             Discord Username: <span className="text-text-highlight dark:text-dark-text-highlight font-semibold">Primqd</span>
-                            <ul className="pl-[2.4rem] list-[disc]"><li>Best way to contact me. Message me first before friending please- I usually don't accept random friend requests.</li></ul>
+                            <ul className="pl-[min(2.4rem,10%)] list-[disc]"><li>Best way to contact me. Message me first before friending please- I usually don't accept random friend requests.</li></ul>
                         </li>
                         <li>
                             Email: <Link className={externalLinkStyle} target="_blank" to="mailto:franklinvchen@outlook.com"> franklinvchen@outlook.com </Link>
-                            <ul className="pl-[2.4rem] list-[disc]"><li>Second best way to contact me. Please note I might take a while to reply to you :)</li></ul>
+                            <ul className="pl-[min(2.4rem,10%)] list-[disc]"><li>Second best way to contact me. Please note I might take a while to reply to you :)</li></ul>
                         </li>
                         <li>
                             GitHub: <Link className={externalLinkStyle} target="_blank" to="https://github.com/Primqd/"> https://github.com/Primqd/ </Link>
