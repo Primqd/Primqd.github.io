@@ -4,7 +4,7 @@ const externalLinkStyle = "text-text-url dark:text-dark-text-url hover:underline
 const internalLinkStyle = "font-semibold text-text-highlight dark:text-dark-text-highlight hover:underline" // links to subpages
 
 export const About: React.FC = () => {
-    return <div className="bg-primary dark:bg-dark-primary text-text-highlight dark:text-dark-text-highlight pt-[5rem] px-[2rem] min-w-screen min-h-screen">
+    return <div className="bg-primary dark:bg-dark-primary text-text-highlight dark:text-dark-text-highlight pt-[5rem] px-[2rem] max-w-screen min-h-screen">
         <div className="flex break-all lg:break-keep">
             <div className="yap align-middle">
                 <div className="pb-[3rem] About me">
