@@ -4,7 +4,7 @@ export const Games: React.FC = () => {
             <iframe
                 className=""
                 height={610}
-                width={950}
+                width={1000}
                 scrolling="no"
                 src="src\assets\operator_game\index.html"
             />
