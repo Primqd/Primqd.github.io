@@ -5,4 +5,3 @@ Built with [Vite](https://vite.dev/), [React](https://react.dev/), [TypeScript](
 
 ## The Awperator
 If you want the game included in the website, you can find the files [here](https://github.com/Primqd/WANICGD_Space_Chen).
-There's a fully compiled build in src/assets/operator_game for WebGL.
