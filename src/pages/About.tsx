@@ -1,241 +1,229 @@
-import { Link } from "react-router-dom";
+const externalLinkStyle = "text-text-url dark:text-dark-text-url hover:underline";
 
-const externalLinkStyle = "text-text-url dark:text-dark-text-url hover:underline"; // links to other websites
-const internalLinkStyle = "font-semibold text-text-highlight dark:text-dark-text-highlight hover:underline" // links to subpages
+type SectionCardProps = {
+    title: string;
+    eyebrow?: string;
+    children: React.ReactNode;
+};
+
+const SectionCard = ({ title, eyebrow, children }: SectionCardProps) => (
+    <section className="rounded-3xl border border-black/5 bg-white/70 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.08)] backdrop-blur dark:border-white/10 dark:bg-white/5">
+        {eyebrow && (
+            <p className="pb-2 text-xs font-semibold uppercase tracking-[0.24em] text-text-url dark:text-dark-text-url">
+                {eyebrow}
+            </p>
+        )}
+        <h2 className="pb-4 text-3xl font-semibold text-text-highlight dark:text-dark-text-highlight">
+            {title}
+        </h2>
+        {children}
+    </section>
+);
+
+const quickFacts = [
+    { label: "School", value: "Juanita High School" },
+    { label: "Graduation", value: "June 2027" },
+    { label: "Current Role", value: "Steamoji Facilitator" },
+    { label: "Focus", value: "Computer Science (Web Development and Computer Architecture), Electrical Engineering (Chip Design, ASICs)" },
+];
+
+const educationItems = [
+    "High-School Diploma, Juanita High School, graduation June 2027",
+    "Advanced International Certificate of Education, Cambridge Program, September 2023 - June 2027",
+    "Washington Food Worker Card, Washington State Food Worker Course, September 2025",
+];
+
+const courseworkItems = [
+    "AP Computer Science A: practiced Java syntax, standard library data structures, and OOP, including inheritance",
+    "AP Calculus BC: learned single-variable calculus, differential equations, sequences and series, and parametric equations",
+    "AP Statistics: studied probability distributions, experimental design, confidence intervals, and significance tests",
+    "Linear Algebra: self-studying with Introduction to Linear Algebra by Gilbert Strang and working through matrix elimination, vector spaces, projections, and determinants",
+];
+
+const experienceBullets = [
+    "Facilitate STEAM learning experiences for children at Steamoji, Inc.",
+    "Help students use tools like Python, TinkerCAD, and Onshape",
+    "Guide hands-on projects and collaborative activities that build critical thinking and problem-solving skills",
+    "Support student engagement through mentoring and interactive sessions",
+];
+
+const activityBullets = [
+    "Competitive Programming: USACO Silver, a 300+ day LeetCode streak, and a 1777 peak ELO",
+    "BWSI Basics of ASICs: learned the PCB and FPGA to ASIC design flow, built Verilog modules, and practiced hardware verification",
+    "Technology Student Association: placed second in WTSA 2026 Coding and reached semifinals in WTSA 2026 Video Game Design",
+];
+
+const projects = [
+    {
+        name: "franklinvc.com",
+        meta: "HTML, JavaScript, React, React Router, TailwindCSS, Git, GitHub Pages",
+        body: "Frontend portfolio site built with React and TailwindCSS, with React Router and Flowbite as supporting libraries.",
+    },
+    {
+        name: "Advent of Code",
+        meta: "Python",
+        body: "Solved the daily programming challenges for the entirety of December 2024 and published the solutions on GitHub.",
+    },
+    {
+        name: "Tetris Tower",
+        meta: "Godot",
+        body: "Built a game with a classmate for Washington TSA 2026 and reached the semifinals stage.",
+    },
+];
+
+const skillGroups = [
+    {
+        title: "Languages",
+        items: ["Python", "Java", "C/C++", "C#", "JavaScript", "TypeScript", "HTML/CSS", "SystemVerilog", "OCaml"],
+    },
+    {
+        title: "Frameworks",
+        items: ["React", "React Router", "Node.js", "Flask", "Vite"],
+    },
+    {
+        title: "Developer Tools",
+        items: ["Git", "Docker", "VS Code", "Visual Studio", "IntelliJ", "Eclipse", "Vivado", "Unity", "Godot"],
+    },
+    {
+        title: "Libraries",
+        items: ["pandas", "NumPy", "Matplotlib", "Tailwind CSS", "Flowbite", "discord.js"],
+    },
+];
+
+const contactLinks = [
+    { label: "Website", value: "https://franklinvc.com/", href: "https://franklinvc.com/" },
+    { label: "GitHub", value: "github.com/Primqd", href: "https://github.com/Primqd" },
+    { label: "Email", value: "frankvc@mit.edu", href: "mailto:frankvc@mit.edu" },
+];
 
 export const About: React.FC = () => {
-    return <div className="bg-primary dark:bg-dark-primary text-text-highlight dark:text-dark-text-highlight pt-[5rem] px-[2rem] max-w-screen min-h-screen">
-        <div className="flex break-all lg:break-keep">
-            <div className="yap align-middle">
-                <div className="pb-[3rem] About me">
-                    <h1 className="text-5xl font-semibold pb-[1rem]">
-                        About me
-                    </h1>
-                    <p className=" text-lg text-text-default dark:text-dark-text-default">
-                        I'm Franklin, an aspiring computer science student currently in sophmore year of high school.
-                        I enjoy
-                        <span className="text-text-highlight dark:text-dark-text-highlight font-semibold"> web development</span> and
-                        <span className="text-text-highlight dark:text-dark-text-highlight font-semibold"> competitive programming</span>,
-                        but I'm still learning about different fields of CS I enjoy.
-                        On the side, I enjoy <span className="text-text-highlight dark:text-dark-text-highlight font-semibold">photography </span>
-                        and <span className="text-text-highlight dark:text-dark-text-highlight font-semibold">gaming</span>.
+    return (
+        <main className="min-h-screen bg-primary px-6 pt-24 text-text-default dark:bg-dark-primary dark:text-dark-text-default">
+            <div className="mx-auto flex max-w-6xl flex-col gap-8">
+                <section className="rounded-[2rem] border border-black/5 bg-gradient-to-br from-white/75 via-white/60 to-white/40 p-8 shadow-[0_24px_90px_rgba(0,0,0,0.12)] backdrop-blur dark:border-white/10 dark:from-white/10 dark:via-white/5 dark:to-white/0">
+                    <p className="pb-3 text-sm font-semibold uppercase tracking-[0.28em] text-text-url dark:text-dark-text-url">
+                        About Me
                     </p>
-                </div>
-                <div className="pb-[3rem] Skills">
-                    <h1 className="text-4xl font-semibold pb-[0.5rem]">
-                        Skills
-                    </h1>
-                    <ul className="pl-[min(1.2rem,10%)] list-disc  text-lg text-text-default dark:text-dark-text-default">
-                        <li className="Programming Languages">
-                            Programming Languages
-                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
-                                <li>
-                                    Python, self taught using <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://www.amazon.com/Advanced-Python-Programming-Brian-Overland/dp/0135159946">
-                                        <span className="italic">Supercharged Python </span>
-                                        by Brian Overland and John Bennett
-                                    </Link>
-                                </li>
-                                <li>
-                                    C++, currently working through <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://www.stroustrup.com/tour3.html">
-                                        <span className="italic">A Tour of C++ (Third Edition) </span>
-                                        by Bjarne Stroustrup
-                                    </Link>
-                                </li>
-                                <li>
-                                    C# in Unity, taught by the <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://www.digipen.edu/">
-                                        DigiPen Institute of Technology
-                                    </Link>
-                                </li>
-                                <li>
-                                    Java, self taught via self-studying for AP Computer Science A (5)
-                                </li>
-                                <li>
-                                    HTML/CSS (what do you think you're looking at?)
-                                </li>
-                                <li>
-                                    JavaScript/TypeScript, currently working through <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://www.amazon.com/Secrets-JavaScript-Ninja-John-Resig/dp/193398869X">
-                                        <span className="italic">Secrets of the JavaScript Ninja (1st edition) </span>
-                                        by John Resig and Bear Bibeault
-                                    </Link>
-                                </li>
-                            </ul>
-                        </li>
-                        <li className="Competitive Programming">
-                            Competitive Programming
-                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
-                                <li>USACO Silver currently</li>
-                                <li>See my LeetCode profile <Link
-                                    className={externalLinkStyle}
-                                    target="_blank"
-                                    to="https://leetcode.com/u/Primqd/">
-                                    here
-                                </Link></li>
-                                <li>Starting this summer, I plan to begin grinding competitive programming until I can reach at least USACO Gold. Wish me luck :)</li>
-                            </ul>
-                        </li>
-                        <li className="Libraries">
-                            Libraries
-                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
-                                <li>
-                                    React, self taught using <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://www.roadtoreact.com/">
-                                        <span className="italic">Road to React (2024 edition) </span>
-                                        by Robin Wieruch
-                                    </Link>
-                                </li>
-                                <li>
-                                    TailwindCSS (used in this website)
-                                </li>
-                            </ul>
-                        </li>
-                        <li className="Education">
-                            Education
-                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
-                                <li>
-                                    Basic Data Structures and Algorithms, informally taught by <Link
-                                        className={externalLinkStyle}
-                                        target="_blank"
-                                        to="https://jerryvc.com/">
-                                        my brother
-                                    </Link>
-                                </li>
-                                <li> Linear Algebra, currently working through <Link
-                                    className={externalLinkStyle}
-                                    target="_blank"
-                                    to="https://www.amazon.com/Introduction-Linear-Algebra-Gilbert-Strang/dp/0980232775">
-                                    <span className="italic">Introduction to Linear Algebra (2nd edition) </span>
-                                    by Gilbert Strang (link to 5th edition)
-                                </Link> with a tutor
-                                </li>
-                                <li> Basic Statistics, see <Link
-                                    className={externalLinkStyle}
-                                    target="_blank"
-                                    to="https://github.com/Primqd/franklin-latex-notes/blob/main/AP%20Stats%20Notes/AP%20STATS.pdf">
-                                    my fully annotated LaTex notes
-                                </Link> on <Link
-                                    className={externalLinkStyle}
-                                    target="_blank"
-                                    to="https://www.bfwpub.com/high-school/us/product/The-Practice-of-Statistics/p/1319113338">
-                                        <span className="italic">The Practice of Statistics for the AP Exam, 6th Edition </span>
-                                        by Daren Starnes and Josh Tabor
-                                    </Link>
-                                </li>
-                            </ul>
-                        </li>
-                        <li className="Other Skills">
-                            Other Skills
-                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
-                                <li>Git, taught by <Link
-                                    className={externalLinkStyle}
-                                    target="_blank"
-                                    to="https://learn.bwsix.edly.io/course/version-control-git-github-2025/">
-                                    a MIT BWSI course
-                                </Link>
-                                </li>
-                                <li>LaTeX (see a collection of my LaTeX notes <Link
-                                    className={externalLinkStyle}
-                                    target="_blank"
-                                    to="https://github.com/Primqd/franklin-latex-notes">
-                                    here!
-                                </Link>)
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div className="pb-[3rem] Hobbies">
-                    <h1 className="text-4xl font-semibold pb-[0.5rem]">
-                        Hobbies
-                    </h1>
-                    <ul className="pl-[min(1.2rem,10%)] list-disc  text-lg text-gray-400 dark:text-dark-gray-400">
-                        <li className="Photography">
-                            Photography
-                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
-                                <li>I've been taking photos on and off for the last 3 years or so!</li>
-                                <li>I take all kinds of photos, but I especially like nature photography</li>
-                                <li>I use a <Link
-                                    className={externalLinkStyle}
-                                    target="_blank"
-                                    to="https://shop.panasonic.com/products/g100-mirrorless-camera-12-32mm-f3-5-5-6-lens">
-                                    Panasonic LUMIX G100
-                                </Link> for most of my photos!</li>
-                                <li>You can see my photo portfolio  <Link
-                                    className={internalLinkStyle}
-                                    to="/projects/photo-portfolio">
-                                    here
-                                </Link>! (Once I complete it, anyways...)</li>
-                            </ul>
-                        </li>
-                        <li className="Geometry Dash">
-                            Geometry Dash
-                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
-                                <li>My hardest is currently <Link
-                                    className={externalLinkStyle}
-                                    target="_blank"
-                                    to="https://www.youtube.com/watch?v=-88D0mXLDqg">
-                                    <span className="italic">Future Funk </span> by JonathanGD
-                                </Link>!</li>
-                                <li>You can see my profile <Link
-                                    className={externalLinkStyle}
-                                    target="_blank"
-                                    to="https://gdbrowser.com/u/Primqd">
-                                    here
-                                </Link>!</li>
-                            </ul>
-                        </li>
-                        <li className="Minecraft">
-                            Minecraft
-                            <ul className="pl-[min(2.4rem,10%)] list-[upper-roman]">
-                                <li>My username is Primqd!</li>
-                                <li>I used to play Hypixel Skyblock, although I've moved onto modded Minecraft currently.</li>
-                                <li>I enjoy TerraFirmaCraft and GregTech... pray for my playtime ;-;</li>
-                                <li>I'm currently playing through <Link
-                                    className={externalLinkStyle}
-                                    target="_blank"
-                                    to="https://modrinth.com/modpack/angel-tech-the-greg-age">
-                                    Angel Tech: The Greg Age
-                                </Link> in my free time!</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div className="pb-[3rem]">
-                    <h1 className="text-4xl font-semibold pb-[0.5rem]">
-                        Contacts
-                    </h1>
-                    <ul className="pl-[min(1.2rem,10%)] list-decimal  text-lg text-gray-400 dark:text-dark-gray-400">
-                        <li>
-                            Discord Username: <span className="text-text-highlight dark:text-dark-text-highlight font-semibold">Primqd</span>
-                            <ul className="pl-[min(2.4rem,10%)] list-[disc]"><li>Best way to contact me. Message me first before friending please- I usually don't accept random friend requests.</li></ul>
-                        </li>
-                        <li>
-                            Email: <Link className={externalLinkStyle} target="_blank" to="mailto:franklinvchen@outlook.com"> franklinvchen@outlook.com </Link>
-                            <ul className="pl-[min(2.4rem,10%)] list-[disc]"><li>Second best way to contact me. Please note I might take a while to reply to you :)</li></ul>
-                        </li>
-                        <li>
-                            GitHub: <Link className={externalLinkStyle} target="_blank" to="https://github.com/Primqd/"> https://github.com/Primqd/ </Link>
-                        </li>
-                        <li>
-                            YouTube: <Link className={externalLinkStyle} target="_blank" to="https://www.youtube.com/@primqd6254/"> https://www.youtube.com/@primqd6254 </Link>
-                        </li>
-                    </ul>
-                </div>
+                    <div className="grid gap-8 lg:grid-cols-[1.4fr_0.9fr] lg:items-start">
+                        <div>
+                            <h1 className="text-5xl font-semibold tracking-tight text-text-highlight dark:text-dark-text-highlight">
+                                Hi!
+                            </h1>
+                            <p className="mt-5 max-w-3xl text-lg leading-8 text-text-default dark:text-dark-text-default">
+                                I’m Franklin Chen, a Juanita High School student graduating in June 2027. My work centers on frontend
+                                development, competitive programming, and steady growth in CS fundamentals. I’ve built websites with
+                                React and TailwindCSS, practiced algorithmic problem solving through USACO and LeetCode, and I currently
+                                work as a Steamoji Facilitator helping younger students learn with Python, TinkerCAD, and Onshape.
+                            </p>
+                        </div>
 
+                        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                            {quickFacts.map((fact) => (
+                                <div
+                                    key={fact.label}
+                                    className="rounded-2xl border border-black/5 bg-white/80 p-4 dark:border-white/10 dark:bg-white/5"
+                                >
+                                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-text-url dark:text-dark-text-url">
+                                        {fact.label}
+                                    </p>
+                                    <p className="pt-2 text-sm font-medium leading-6 text-text-highlight dark:text-dark-text-highlight">
+                                        {fact.value}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                <div className="grid gap-8 xl:grid-cols-2">
+                    <SectionCard title="Education & Certifications" eyebrow="Background">
+                        <ul className="space-y-3 text-lg leading-8">
+                            {educationItems.map((item) => (
+                                <li key={item} className="rounded-2xl bg-black/5 px-4 py-3 dark:bg-white/5">
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </SectionCard>
+
+                    <SectionCard title="Coursework" eyebrow="Academics">
+                        <ul className="space-y-3 text-lg leading-8">
+                            {courseworkItems.map((item) => (
+                                <li key={item} className="rounded-2xl bg-black/5 px-4 py-3 dark:bg-white/5">
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </SectionCard>
+
+                    <SectionCard title="Professional Experience" eyebrow="Work">
+                        <p className="pb-4 text-lg font-medium text-text-highlight dark:text-dark-text-highlight">
+                            Steamoji Facilitator, Steamoji, Inc. · January 2026 - Present
+                        </p>
+                        <ul className="space-y-3 text-lg leading-8">
+                            {experienceBullets.map((item) => (
+                                <li key={item} className="rounded-2xl bg-black/5 px-4 py-3 dark:bg-white/5">
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </SectionCard>
+
+                    <SectionCard title="Activities" eyebrow="Outside the classroom">
+                        <ul className="space-y-3 text-lg leading-8">
+                            {activityBullets.map((item) => (
+                                <li key={item} className="rounded-2xl bg-black/5 px-4 py-3 dark:bg-white/5">
+                                    {item}
+                                </li>
+                            ))}
+                        </ul>
+                    </SectionCard>
+
+                    <SectionCard title="Projects" eyebrow="Built work">
+                        <div className="space-y-4">
+                            {projects.map((project) => (
+                                <article key={project.name} className="rounded-2xl bg-black/5 p-4 dark:bg-white/5">
+                                    <h3 className="text-xl font-semibold text-text-highlight dark:text-dark-text-highlight">
+                                        {project.name}
+                                    </h3>
+                                    <p className="pt-1 text-sm font-medium uppercase tracking-[0.18em] text-text-url dark:text-dark-text-url">
+                                        {project.meta}
+                                    </p>
+                                    <p className="pt-3 text-lg leading-8">{project.body}</p>
+                                </article>
+                            ))}
+                        </div>
+                    </SectionCard>
+
+                    <SectionCard title="Technical Skills" eyebrow="Toolkit">
+                        <div className="grid gap-4 sm:grid-cols-2">
+                            {skillGroups.map((group) => (
+                                <div key={group.title} className="rounded-2xl bg-black/5 p-4 dark:bg-white/5">
+                                    <h3 className="pb-2 text-lg font-semibold text-text-highlight dark:text-dark-text-highlight">
+                                        {group.title}
+                                    </h3>
+                                    <p className="text-base leading-7">{group.items.join(", ")}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </SectionCard>
+
+                    <SectionCard title="Contact" eyebrow="Reach out">
+                        <div className="space-y-3 text-lg leading-8">
+                            {contactLinks.map((link) => (
+                                <div key={link.label} className="rounded-2xl bg-black/5 px-4 py-3 dark:bg-white/5">
+                                    <p className="text-xs font-semibold uppercase tracking-[0.24em] text-text-url dark:text-dark-text-url">
+                                        {link.label}
+                                    </p>
+                                    <a className={externalLinkStyle} href={link.href} target="_blank" rel="noreferrer noopener">
+                                        {link.value}
+                                    </a>
+                                </div>
+                            ))}
+                        </div>
+                    </SectionCard>
+                </div>
             </div>
-        </div>
-    </div>
-}
+        </main>
+    );
+};
