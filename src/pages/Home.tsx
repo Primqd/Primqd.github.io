@@ -46,18 +46,24 @@ const ACTIVITES = [
 
 const PROJECTS = [
   {
-    name: 'Tetris Tower',
-    link: 'https://primqd.itch.io/tetris-tower',
-    description:
-      'A Godot game a classmate and I built for Washington TSA, which qualified for Video Game Design semifinals.',
-    skills: ['Godot', 'Game Design', 'Collaboration'],
-  },
-  {
     name: 'franklinvc.com',
     link: 'https://franklinvc.com/',
     description:
       'This very site — a personal website built from scratch with React, TypeScript, and TailwindCSS.',
     skills: ['React', 'TypeScript', 'TailwindCSS', 'Vite'],
+  },
+  {
+    name: 'Tetris Tower',
+    link: 'https://primqd.itch.io/tetris-tower',
+    description:
+      'Rougelike-tetris game built for Washington TSA, which qualified for Video Game Design semifinals. Built in Godot.',
+    skills: ['Godot', 'Game Design', 'Source Control', 'Collaboration'],
+  },
+  {
+    name: 'The Awperator',
+    link: 'https://play.unity.com/api/v1/games/game/974f96db-7cac-40e1-bdab-fc4ad5b2095a/build/latest/frame',
+    description: 'Experimental game built for the WANIC Game Design Summer Course at Digipen.',
+    skills: ['Unity', 'Source Control']
   },
   {
     name: 'Advent of Code',
