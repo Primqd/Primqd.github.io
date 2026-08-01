@@ -49,7 +49,7 @@ const PROJECTS = [
     name: 'Tetris Tower',
     link: 'https://primqd.itch.io/tetris-tower',
     description:
-      'A Godot game a classmate and I built for Washington TSA, where we placed second in the Video Game Design semifinals.',
+      'A Godot game a classmate and I built for Washington TSA, which qualified for Video Game Design semifinals.',
     skills: ['Godot', 'Game Design', 'Collaboration'],
   },
   {
