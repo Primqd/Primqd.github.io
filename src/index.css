@@ -3,23 +3,17 @@
 @source "../.flowbite-react/class-list.json";
 
 @theme {
-    --color-primary: #ffffff;
-    --color-secondary: #e5e5e5;
-    --color-button-hover: #4a4a4a;
-    --color-text-default: #737373;
-    --color-text-highlight: #000000;
-    --color-text-dark: #e5e5e5;
-    --color-text-url: #3b82f6;
-    --color-border-bright: #a3a3a3;
-    
+
     --color-dark-primary: #262626;
     --color-dark-secondary: #404040;
     --color-dark-button-hover: #d4d4d4;
     --color-dark-text-default: #a3a3a3;
+    --color-dark-text-average: #e8e8e8; /*average between default and highlight*/
     --color-dark-text-highlight: #ffffff;
     --color-dark-text-dark: #737373;
     --color-dark-text-url: #06b6d4;
     --color-dark-border-bright: #525252;
 
-    --color-accent: #c673ff;
+    /* fallback accent; overridden at runtime by a random hue in main.tsx */
+    --color-accent: #fb7185;
 }

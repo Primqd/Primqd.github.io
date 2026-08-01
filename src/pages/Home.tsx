@@ -19,22 +19,25 @@ const WORK_EXPERIENCE = [
 
 const ACTIVITES = [
   {
-    period: '2024 — Present',
-    role: 'Math Club Co-President · Juanita High School',
-    description:
-      'Help organize school participation in BMT and the AMC 10/12, and partnered with the National Honor Society to set up a volunteer math tutoring program. Run presentations on college-level math subjects to get more students interested in the field.',
-    skills: ['Leadership', 'Tutoring'],
-  },
-  {
     period: 'Jul 2026',
     role: 'Basics of ASICs · MIT Beaver Works Summer Institute',
+    link: 'https://bwsi.mit.edu/bwsi-programs-2/basics-of-asics/',
     description:
       'Learned the PCB, FPGA, and ASIC design flows, building and simulating SystemVerilog modules in team-based labs. Developed a four-layer MNIST classifier into an ASIC over the course of five days for a capstone project.',
     skills: ['SystemVerilog', 'ASIC', 'FPGA', 'PCB Design'],
   },
   {
+    period: '2024 — Present',
+    role: 'Math Club Co-President · Juanita High School',
+    link: '',
+    description:
+      'Help organize school participation in BMT and the AMC 10/12, and partnered with the National Honor Society to set up a volunteer math tutoring program. Run presentations on college-level math subjects to get more students interested in the field.',
+    skills: ['Leadership', 'Tutoring'],
+  },
+  {
     period: 'Sep 2026 — Present',
     role: 'Member · National Honor Society',
+    link: '',
     description:
       'Volunteer 30+ hours to the community and help tutor math alongside Math Club.',
     skills: ['Volunteering', 'Tutoring'],
@@ -44,18 +47,21 @@ const ACTIVITES = [
 const PROJECTS = [
   {
     name: 'Tetris Tower',
+    link: 'https://primqd.itch.io/tetris-tower',
     description:
       'A Godot game a classmate and I built for Washington TSA, where we placed second in the Video Game Design semifinals.',
-    skills: ['Godot', 'GDScript', 'Game Design'],
+    skills: ['Godot', 'Game Design', 'Collaboration'],
   },
   {
     name: 'franklinvc.com',
+    link: 'https://franklinvc.com/',
     description:
       'This very site — a personal website built from scratch with React, TypeScript, and TailwindCSS.',
     skills: ['React', 'TypeScript', 'TailwindCSS', 'Vite'],
   },
   {
     name: 'Advent of Code',
+    link: 'https://github.com/Primqd/advent-of-code',
     description:
       'A full month of Advent of Code solutions written in Python.',
     skills: ['Python', 'Algorithms', 'Data Structures'],
@@ -166,15 +172,15 @@ function Home() {
                         <span
                           className={`mr-4 h-px transition-all ${ // transition-all specifies default lerp function between rule states
                             active
-                              ? 'w-16 bg-dark-text-highlight'
-                              : 'w-8 bg-dark-border-bright group-hover:w-16 group-hover:bg-dark-text-highlight'
+                              ? 'w-16 bg-accent'
+                              : 'w-8 bg-dark-border-bright group-hover:w-8 group-hover:bg-accent' // hover color is average between dark and highlight
                           }`}
                         />
                         <span
-                          className={`text-lg font-light tracking-widest transition-colors ${
+                          className={`text-lg tracking-widest transition-colors font-light ${
                             active
                               ? 'text-dark-text-highlight'
-                              : 'text-dark-text-dark group-hover:text-dark-text-highlight'
+                              : 'text-dark-text-dark group-hover:text-dark-text-average '
                           }`}
                         >
                           {label}
@@ -252,24 +258,32 @@ function Home() {
               Work Experience
             </h3>
             <ol className="group/list pt-4">
-              {WORK_EXPERIENCE.map(({ period, role, description, skills }) => (
+              {WORK_EXPERIENCE.map(({ period, role, description, skills, link }) => (
                 <li key={role} className="group relative rounded-lg transition-all lg:p-4 lg:-mx-4 lg:-mt-4 mb-8 lg:hover:bg-dark-secondary/40 lg:group-hover/list:opacity-50 lg:hover:!opacity-100">
-                  <div className="sm:grid sm:grid-cols-8 sm:gap-6">
-                    <p className="sm:col-span-2 mb-2 sm:mb-0 text-xs font-semibold uppercase tracking-wide text-dark-text-dark sm:pt-1">
-                      {period}
-                    </p>
-                    <div className="sm:col-span-6">
-                      <h4 className="font-medium leading-snug text-dark-text-highlight">
-                        {role}
-                      </h4>
-                      <p className="mt-2 text-sm leading-normal">
-                        {description}
+                  {((child) => (link.length === 0 ? <>{child}</> : <a href={link} target="_blank" rel="noreferrer">{child}</a>))( // link wrapper
+                    <div className="sm:grid sm:grid-cols-8 sm:gap-6">
+                      <p className="sm:col-span-2 mb-2 sm:mb-0 text-xs font-semibold uppercase tracking-wide text-dark-text-dark sm:pt-1">
+                        {period}
                       </p>
-                      <ul className="flex flex-wrap" aria-label="Skills used">
-                        {skills.map((skill) => <SkillPill key={skill} skill={skill} />)}
-                      </ul>
+                      <div className="sm:col-span-6">
+                        <h4 className={`font-medium leading-snug text-dark-text-highlight ${link.length !== 0 ? 'group-hover:text-accent transition-colors flex items-center gap-2' : ''}`}>
+                          {role} {link.length !== 0 ?
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-3 w-3 shrink-0" aria-hidden="true">
+                            <line x1="0" y1="24" x2="24" y2="0" strokeWidth="3"/> {/* base */}
+                            {/* tip, to account for rendering fuckery stroke width = base strokeWidth * sqrt(2) */}
+                            <line x1="6" y1="0" x2="24" y2="0" strokeWidth="4.24" />
+                            <line x1="24" y1="18" x2="24" y2="0"strokeWidth="4.24"/>
+                          </svg> : <svg className="hidden"></svg>}
+                        </h4>
+                        <p className="mt-2 text-sm leading-normal">
+                          {description}
+                        </p>
+                        <ul className="flex flex-wrap" aria-label="Skills used">
+                          {skills.map((skill) => <SkillPill key={skill} skill={skill} />)}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </li>
               ))}
             </ol>
@@ -277,24 +291,32 @@ function Home() {
               Activities
             </h3>
             <ol className="group/list pt-4">
-              {ACTIVITES.map(({ period, role, description, skills }) => (
+              {ACTIVITES.map(({ period, role, description, skills, link }) => (
                 <li key={role} className="group relative rounded-lg transition-all lg:p-4 lg:-mx-4 lg:-mt-4 mb-8 lg:hover:bg-dark-secondary/40 lg:group-hover/list:opacity-50 lg:hover:!opacity-100">
-                  <div className="sm:grid sm:grid-cols-8 sm:gap-6">
-                    <p className="sm:col-span-2 mb-2 sm:mb-0 text-xs font-semibold uppercase tracking-wide text-dark-text-dark sm:pt-1">
-                      {period}
-                    </p>
-                    <div className="sm:col-span-6">
-                      <h4 className="font-medium leading-snug text-dark-text-highlight">
-                        {role}
-                      </h4>
-                      <p className="mt-2 text-sm leading-normal">
-                        {description}
+                  {((child) => (link.length === 0 ? <>{child}</> : <a href={link} target="_blank" rel="noreferrer">{child}</a>))( // link wrapper
+                    <div className="sm:grid sm:grid-cols-8 sm:gap-6">
+                      <p className="sm:col-span-2 mb-2 sm:mb-0 text-xs font-semibold uppercase tracking-wide text-dark-text-dark sm:pt-1">
+                        {period}
                       </p>
-                      <ul className="flex flex-wrap" aria-label="Skills used">
-                        {skills.map((skill) => <SkillPill key={skill} skill={skill} />)}
-                      </ul>
+                      <div className="sm:col-span-6">
+                        <h4 className={`font-medium leading-snug text-dark-text-highlight ${link.length !== 0 ? 'group-hover:text-accent transition-colors flex items-center gap-2' : ''}`}>
+                          {role} {link.length !== 0 ? 
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-3 w-3 shrink-0" aria-hidden="true">
+                            <line x1="0" y1="24" x2="24" y2="0" strokeWidth="3"/> {/* base */}
+                            {/* tip, to account for rendering fuckery stroke width = base strokeWidth * sqrt(2) */}
+                            <line x1="6" y1="0" x2="24" y2="0" strokeWidth="4.24" />
+                            <line x1="24" y1="18" x2="24" y2="0"strokeWidth="4.24"/>
+                          </svg> : <svg className="hidden"></svg>}
+                        </h4>
+                        <p className="mt-2 text-sm leading-normal">
+                          {description}
+                        </p>
+                        <ul className="flex flex-wrap" aria-label="Skills used">
+                          {skills.map((skill) => <SkillPill key={skill} skill={skill} />)}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </li>
               ))}
             </ol>
@@ -305,18 +327,26 @@ function Home() {
               Projects
             </h3>
             <ol className="group/list space-y-24">
-              {PROJECTS.map(({ name, description, skills }) => (
-                <li key={name} className="group relative rounded-lg transition-all lg:p-4 lg:-mx-4 lg:-mt-4 mb-8 lg:hover:bg-dark-secondary/40 lg:group-hover/list:opacity-50 lg:hover:!opacity-100">
-                  <h4 className="font-medium leading-snug text-dark-text-highlight">
-                    {name}
-                  </h4>
-                  <p className="mt-2 text-sm leading-normal">
-                    {description}
-                  </p>
-                  <ul className="flex flex-wrap" aria-label="Technologies used">
-                    {skills.map((skill) => <SkillPill key={skill} skill={skill} />)}
-                  </ul>
-                </li>
+              {PROJECTS.map(({ name, description, skills, link }) => (
+                ((child) => (link.length === 0 ? <>{child}</> : <a href={link} target="_blank" rel="noreferrer">{child}</a>))(
+                  <li key={name} className="group relative rounded-lg transition-all lg:p-4 lg:-mx-4 lg:-mt-4 mb-8 lg:hover:bg-dark-secondary/40 lg:group-hover/list:opacity-50 lg:hover:!opacity-100">
+                    <h4 className={`font-medium leading-snug text-dark-text-highlight ${link.length !== 0 ? 'group-hover:text-accent transition-colors flex items-center gap-2' : ''}`}>
+                      {name}{link.length !== 0 ? 
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-3 w-3 shrink-0" aria-hidden="true">
+                            <line x1="0" y1="24" x2="24" y2="0" strokeWidth="3"/> {/* base */}
+                            {/* tip, to account for rendering fuckery stroke width = base strokeWidth * sqrt(2) */}
+                            <line x1="6" y1="0" x2="24" y2="0" strokeWidth="4.24" />
+                            <line x1="24" y1="18" x2="24" y2="0"strokeWidth="4.24"/>
+                      </svg> : <svg className="hidden"></svg>}
+                    </h4>
+                    <p className="mt-2 text-sm leading-normal">
+                      {description}
+                    </p>
+                    <ul className="flex flex-wrap" aria-label="Technologies used">
+                      {skills.map((skill) => <SkillPill key={skill} skill={skill} />)}
+                    </ul>
+                  </li>
+                )
               ))}
             </ol>
           </section>
