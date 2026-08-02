@@ -281,7 +281,7 @@ export function Home() {
               </p>
 
               <p>
-                In my spare time, you can usually find me catching some fish, grinding a Geometry Dash level, playing a new Minecraft modpack, or trying a new hobby.
+                In my spare time, you can usually find me catching fish, taking photos, or trying out a new hobby. I also like playing video games, most notaby Geometry Dash, Minecraft, and Slay the Spire 2.
               </p>
             </div>
           </section>
