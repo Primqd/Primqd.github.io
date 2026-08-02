@@ -2,6 +2,7 @@ import { useEffect,useState } from "react"
 
 const NAV_ITEMS = [
   { id: 'about', label: 'About Me' },
+  { id: 'education', label: 'Qualifications' },
   { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
 ]
@@ -42,6 +43,31 @@ const ACTIVITES = [
       'Volunteer 30+ hours to the community and help tutor math alongside Math Club.',
     skills: ['Volunteering', 'Tutoring'],
   },
+]
+
+const EDUCATION = [
+  {
+    period: '2023 — 2027',
+    role: 'High School Diploma · Juanita High School',
+    link: '',
+    description: '4.0 GPA, SAT 1560.',
+    skills: [],
+  },
+  {
+    period: '2023 — 2027',
+    role: 'AICE Diploma · Juanita High School',
+    link: '',
+    description: 'On track for Merit Distinction.',
+    skills: [],
+  },
+]
+
+const AWARDS = [
+  'AP Scholar with Distinction over 13 AP tests',
+  'USACO Silver',
+  'SACO 2026 2nd place',
+  'WTSA Coding 2nd place',
+  'WTSA Video Game Design Semifinals',
 ]
 
 const PROJECTS = [
@@ -257,6 +283,53 @@ function Home() {
                 In my spare time, you can usually find me catching some fish, grinding a Geometry Dash level, playing a new Minecraft modpack, or trying a new hobby.
               </p>
             </div>
+          </section>
+
+          <section id="education" aria-label="Education and awards">
+            <h3 className={header_style}>
+              Education
+            </h3>
+            <ol className="group/list pt-4">
+              {EDUCATION.map(({ period, role, description, skills, link }) => (
+                <li key={role} className="group relative rounded-lg transition-all lg:p-4 lg:-mx-4 lg:-mt-4 mb-8 lg:hover:bg-dark-secondary/40 lg:group-hover/list:opacity-50 lg:hover:!opacity-100">
+                  {((child) => (link.length === 0 ? <>{child}</> : <a href={link} target="_blank" rel="noreferrer">{child}</a>))( // link wrapper
+                    <div className="sm:grid sm:grid-cols-8 sm:gap-6">
+                      <p className="sm:col-span-2 mb-2 sm:mb-0 text-xs font-semibold uppercase tracking-wide text-dark-text-dark sm:pt-1">
+                        {period}
+                      </p>
+                      <div className="sm:col-span-6">
+                        <h4 className={`font-normal leading-snug text-dark-text-highlight ${link.length !== 0 ? 'group-hover:text-accent transition-colors flex items-center gap-2' : ''}`}>
+                          {role} {link.length !== 0 ?
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-3 w-3 shrink-0" aria-hidden="true">
+                            <line x1="0" y1="24" x2="24" y2="0" strokeWidth="3"/> {/* base */}
+                            {/* tip, to account for rendering fuckery stroke width = base strokeWidth * sqrt(2) */}
+                            <line x1="6" y1="0" x2="24" y2="0" strokeWidth="4.24" />
+                            <line x1="24" y1="18" x2="24" y2="0"strokeWidth="4.24"/>
+                          </svg> : <svg className="hidden"></svg>}
+                        </h4>
+                        <p className="mt-2 text-sm leading-normal">
+                          {description}
+                        </p>
+                        <ul className="flex flex-wrap" aria-label="Skills used">
+                          {skills.map((skill) => <SkillPill key={skill} skill={skill} />)}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ol>
+            <h3 className={header_style}>
+              Awards
+            </h3>
+            <ul className="pt-2 space-y-2">
+              {AWARDS.map((award) => (
+                <li key={award} className="flex items-start gap-3 text-sm">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden="true" />
+                  <span className="font-normal text-dark-text-highlight">{award}</span>
+                </li>
+              ))}
+            </ul>
           </section>
 
           <section id="experience" aria-label="Work experience and activities">
