@@ -150,8 +150,10 @@ function BoldLink(text : string, link : string) {
 // tailwind styles
 const header_style = "mb-6 text-xl font-semibold uppercase tracking-widest text-dark-text-highlight";
 
-function Home() {
+export function Home() {
   const [activeSection, setActiveSection] = useState('about');
+
+  // throw new Error('test');
 
   useEffect(() => { // scroll-spy: highlight the nav item whose section is in view
     const sections = NAV_ITEMS
@@ -180,7 +182,6 @@ function Home() {
   return (
     <div className="bg-dark-primary text-dark-text-default min-h-screen">
       <div className="mx-auto max-w-6xl px-6 md:px-12 lg:px-16 lg:flex lg:gap-16">
-
         {/* Left column: sticky header */}
         <header className="lg:sticky lg:top-0 lg:h-screen lg:w-1/2 flex flex-col justify-between py-16 lg:py-24">
           <div>
@@ -435,5 +436,3 @@ function Home() {
     </div>
   )
 }
-
-export default Home;
