@@ -122,7 +122,7 @@ function BoldLink(text : string, link : string) {
 }
 
 // tailwind styles
-const header_style = "mb-6 text-sm font-semibold uppercase tracking-widest text-dark-text-highlight";
+const header_style = "mb-6 text-xl font-semibold uppercase tracking-widest text-dark-text-highlight";
 
 function Home() {
   const [activeSection, setActiveSection] = useState('about');
