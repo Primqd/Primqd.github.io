@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page not found · frankvc.com</title>
+    <!-- Self-contained fallback 404 for static hosts (e.g. GitHub Pages):
+         styled to match the home page theme, works with no JS and no built assets. -->
+    <style>
+      :root {
+        --dark-primary: #262626;
+        --dark-text-default: #a3a3a3;
+        --dark-text-highlight: #ffffff;
+        --accent: #fb7185; /* fallback accent; site rolls a random hue at runtime */
+      }
+      * { margin: 0; box-sizing: border-box; }
+      body {
+        background: var(--dark-primary);
+        color: var(--dark-text-default);
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 1.5rem;
+      }
+      h1 {
+        color: var(--dark-text-highlight);
+        font-size: 2.25rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+      }
+      @media (min-width: 640px) { h1 { font-size: 3rem; } }
+      p { margin-top: 1rem; line-height: 1.625; }
+      a.home {
+        margin-top: 2rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 600;
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.15s ease;
+      }
+      a.home:hover { color: var(--dark-text-highlight); }
+    </style>
+  </head>
+  <body>
+    <h1>Oops!</h1>
+    <p>Sorry, we can't find the page you're looking for.</p>
+    <a class="home" href="/">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" className="h-3 w-3 shrink-0" aria-hidden="true">
+      <line x1="0" y1="24" x2="24" y2="0" strokeWidth="3"/> {/* base */}
+      {/* tip, to account for rendering fuckery stroke width = base strokeWidth * sqrt(2) */}
+      <line x1="6" y1="0" x2="24" y2="0" strokeWidth="4.24" />
+      <line x1="24" y1="18" x2="24" y2="0"strokeWidth="4.24"/>
+    </svg>
+      Go Back Home
+    </a>
+    <script>
+      // Match the site's random accent hue (see src/main.tsx); harmless if it fails.
+      try {
+        var roll = Math.floor(Math.random() * 260);
+        var hue = roll < 200 ? roll : roll + 100;
+        document.documentElement.style.setProperty('--accent', 'hsl(' + hue + ', 75%, 50%)');
+      } catch (e) {}
+    </script>
+  </body>
+</html>
